@@ -1,7 +1,7 @@
 import React from 'react'; 
 import ReactDOM from 'react-dom'; 
-import Header from './header'
-import Login from './login'
+import Header from './components/header'
+import Login from './components/login'
 
 let PageFrame = () => { 
 
