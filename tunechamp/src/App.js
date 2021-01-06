@@ -14,7 +14,7 @@ const App = () => {
         </main>
 
         <footer className="revText">
-            TEST
+            TEST AGAIN
         </footer>
         </div>
     );
