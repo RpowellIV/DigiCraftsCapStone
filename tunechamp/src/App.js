@@ -1,22 +1,12 @@
 import { Link, Route, Switch } from 'react-router-dom'
-import { Header, Login } from '../components'
+import { Header, Login } from './components'
 
-
-// let PageFrame = () => { 
-
-//     return (
-//         <div>
-//             <Header />
-//             <Login />
-//         </div>
-//     )
-// }; 
 
 const App = () => {
     return (
         <div className="y-app">
         <header>
-            <Header/>
+            <Header />
         </header>
 
         <main>
