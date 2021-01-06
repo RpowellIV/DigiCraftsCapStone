@@ -9,7 +9,7 @@ let Login = () => {
             {/* Logo */}
             <img src={TuneChamp} width='10%' alt="TuneChamp test logo"></img>
             {/* Login w/ spotify button, calls login URL from spotify.js */}
-            <button><a href={loginUrl}>LOGIN WITH SPOTIFY</a></button>
+            <button><a href={loginUrl}>LOGIN WITH SPOTIFY CHECK</a></button>
         </div>
     )
 }
