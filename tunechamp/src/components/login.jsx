@@ -1,8 +1,8 @@
 import React from 'react';
 import TuneChamp from "../media/tuneChampImg.png";
-import { Link, Route, Switch } from 'react-router-dom';
 import { Header } from './index';
 import LinkButton from './linkButton'
+import '../styles/login.css'
 
 let Login = () => {
     return (
