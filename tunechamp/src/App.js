@@ -1,3 +1,4 @@
+import React from 'react';
 import { Login, Header, Home, LeaderBoard } from './components'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
@@ -18,7 +19,6 @@ const App = () => {
                     </Route>
                 </Switch>
             </div>
-
         </Router>
     );
     }
