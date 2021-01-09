@@ -1,21 +1,18 @@
 import React from 'react';
-import TuneChamp from "../media/tuneChampImg.png";
-import { Header } from './index';
-import LinkButton from './linkButton'
+import LinkButton from './LinkButton'
 import '../styles/login.css'
 
 let Login = () => {
     return (
             <div className="login">
-                <header>
-                    <Header />
-                </header>
-                {/* Logo */}
-                <img className='logo' src={TuneChamp} width='10%' alt="TuneChamp test logo"></img>
-                {/* Login w/ spotify button, calls login URL from spotify.js */}
-                <LinkButton to='/dashboard'> LOGIN WITH SPOTIFY</LinkButton>
+                <div className="jumbotron jumbotron-fluid">
+                    <div className="container">
+                        <h1 className="display-4">TUNE CHAMP TEST</h1>
+                        <p className="lead">THE RIGHT GAME FOR GAME NIGHT...</p>
+                    </div>
+                </div>
+                <LinkButton to='/home'> LOGIN WITH SPOTIFY</LinkButton>
             </div>
     )
 }
-
 export default Login

@@ -5,10 +5,14 @@
     background-color: black;
 }
 
-.login > img {
-    width: 100%;
+.logo{
+    object-fit: contain;
+    align-items: center;
+    justify-content: center;
+    height:150px;
+    widows: 150px;
+    background-color: aqua;
 }
-
 .login > a {
     padding: 10px;
     border-radius: 99px;
@@ -16,10 +20,6 @@
     font-weight: 800;
     color: white;
     text-decoration: none; 
-}
-
-.login, img {
-    height:auto;
 }
 
 .login {

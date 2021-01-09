@@ -1,15 +1,18 @@
 import React from "react";
 import { Link } from 'react-router-dom'
-
+import TuneChamp from "../media/tuneChampImg.png";
 let Header = () => { 
 
     return (
-        <div className="jumbotron jumbotron-fluid">
-            <div className="container">
-                <h1 className="display-4">TUNE CHAMP TEST</h1>
-                <p className="lead">THE RIGHT GAME FOR GAME NIGHT...</p>
+        <nav className='header'>
+            <div>
+                <Link to='/home' className='home'>
+                    <img className='logo' src={TuneChamp} alt="TuneChamp test logo"></img>
+                </Link>
+                <Link to='/leaderboard' className='leaderboard'>Leaderboard</Link>
+                <Link to='/' className='logout'>LogOut</Link>                
             </div>
-        </div>
+        </nav>
     )
 }; 
 
