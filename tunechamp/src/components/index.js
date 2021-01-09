@@ -1,7 +1,7 @@
-import Header from './header'
-import Login from './login'
-import Dashboard from './dashboard'
-import TuneChamp from './tuneChamp'
-import LeaderBoard from './leaderBoard'
+import Header from './Header'
+import Login from './Login'
+import Home from './Home'
+import TuneChamp from './TuneChamp'
+import LeaderBoard from './LeaderBoard'
 
-export { Header, Login, Dashboard, TuneChamp, LeaderBoard };
+export { Header, Login, Home, TuneChamp, LeaderBoard };
