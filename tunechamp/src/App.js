@@ -1,8 +1,9 @@
-import { Link, Route, Switch } from 'react-router-dom';
-import { Dashboard, Header, Login, TuneChamp, LeaderBoard } from './components'
+import { Login, Header, Home, LeaderBoard } from './components'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 const App = () => {
     return (
+<<<<<<< HEAD
         <div className="y-app">
             <header>
                 <div className='nav'>
@@ -23,8 +24,25 @@ const App = () => {
                 TEST
             </footer>
         </div>
+=======
+        <Router>
+            <div className="y-app">
+                <Switch>
+                    <Route path='/'>
+                        <Header />
+                        <Login />
+                    </Route>
+                    <Route path='/home'>
+                        <Home />
+                    </Route>
+                    <Route path='/leaderboard'>
+                        <LeaderBoard />
+                    </Route>
+                </Switch>
+            </div>
+
+        </Router>
+>>>>>>> d330e2b1c1cceb47e0a1819cc5bf6ff5a460e0f1
     );
     }
-
-
 export default App;
