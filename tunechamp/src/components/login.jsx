@@ -1,6 +1,7 @@
 import React from 'react';
 import LinkButton from './LinkButton'
 import '../styles/login.css'
+import { loginUrl } from './spotify'
 
 let Login = () => {
     return (
@@ -11,7 +12,8 @@ let Login = () => {
                         <p className="lead">THE RIGHT GAME FOR GAME NIGHT...</p>
                     </div>
                 </div>
-                <LinkButton to='/home'> LOGIN WITH SPOTIFY</LinkButton>
+                <a href={loginUrl}>LOGIN WITH SPOTIFY TEST</a>
+                <LinkButton to='/home'> ------------</LinkButton>
             </div>
     )
 }
