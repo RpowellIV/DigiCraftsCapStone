@@ -6,9 +6,9 @@ const App = () => {
         <div className="y-app">
             <header>
                 <div className='nav'>
-                <Link to='/dashboard'>DashBoard</Link>
-                <Link to='/tuneChamp'>TuneChamp</Link>
-                <Link to='/leaderBoard'>Leaderboards</Link>
+                    <Link to='/dashboard'>DashBoard</Link>
+                    <Link to='/tuneChamp'>TuneChamp</Link>
+                    <Link to='/leaderBoard'>Leaderboards</Link>
                 </div>
              </header>
              <main>
