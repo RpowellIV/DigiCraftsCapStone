@@ -1,5 +1,5 @@
-import Header from './Header'
-import Login from './Login'
+import Header from './header'
+import Login from './login'
 import Home from './Home'
 import TuneChamp from './TuneChamp'
 import LeaderBoard from './LeaderBoard'
