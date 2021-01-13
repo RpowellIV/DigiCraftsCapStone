@@ -1,5 +1,10 @@
+import React, { useEffect, useState } from 'react';
+import axios from 'axios'
 import { Login, Header, Home, LeaderBoard } from './components'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { getTokenFromUrl } from './spotify';
+import SpotifyWebApi from "spotify-web-api-js";
+import { useDataLayerValue } from "./DataLayer" 
 
 const App = () => {
     return (
@@ -21,5 +26,7 @@ const App = () => {
 
         </Router>
     );
-    }
+};
+
+
 export default App;
