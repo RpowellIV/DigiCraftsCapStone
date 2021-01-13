@@ -11,19 +11,20 @@ const App = () => {
         <Router>
             <div className="y-app">
                 <Switch>
-                    <Route path='/'>
+                    <Route exact path='/'>
                         <Header />
                         <Login />
                     </Route>
                     <Route path='/home'>
+                        <Header />
                         <Home />
                     </Route>
                     <Route path='/leaderboard'>
+                        <Header />
                         <LeaderBoard />
                     </Route>
                 </Switch>
             </div>
-
         </Router>
     );
 };
