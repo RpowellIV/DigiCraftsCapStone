@@ -1,0 +1,23 @@
+.logo {
+  /* object-fit: contain; */
+  justify-content: left;
+  height: 150px;
+  widows: 150px;
+  background-color: #20457c;
+}
+.head {
+  display: flex;
+}
+.home {
+  justify-content: left;
+}
+.leaderboard {
+  justify-content: center;
+  padding: 25px, 25px, 25px, 25px;
+  color: black;
+}
+.logout {
+  justify-content: right;
+  padding: 25px, 25px, 25px, 25px;
+  color: black;
+}

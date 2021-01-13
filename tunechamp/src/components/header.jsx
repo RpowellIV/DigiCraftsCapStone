@@ -1,10 +1,11 @@
 import React from "react";
 import { Link } from 'react-router-dom'
 import TuneChamp from "../media/tuneChampImg.png";
+import '../styles/header.css'
 let Header = () => { 
 
     return (
-        <nav className='header'>
+        <nav className='head'>
             <div>
                 <Link to='/home' className='home'>
                     <img className='logo' src={TuneChamp} alt="TuneChamp test logo"></img>

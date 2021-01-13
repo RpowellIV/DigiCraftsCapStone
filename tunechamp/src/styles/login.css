@@ -1,27 +1,26 @@
 .login {
-    display: grid;
-    place-items: center;
-    height: 50vh;
-    background-color: black;
+  display: grid;
+  place-items: center;
+  height: 50vh;
+  background-color: black;
 }
 
-.logo{
-    object-fit: contain;
-    align-items: center;
-    justify-content: center;
-    height:150px;
-    widows: 150px;
-    background-color: aqua;
-}
 .login > a {
-    padding: 10px;
-    border-radius: 99px;
-    background-color: #1db954;
-    font-weight: 800;
-    color: white;
-    text-decoration: none; 
+  padding: 10px;
+  border-radius: 99px;
+  background-color: #105e3a;
+  font-weight: 800;
+  color: white;
+  text-decoration: none;
 }
 
 .login {
-    background-color: aqua;
+  background-color: rgb(40, 4, 7);
+}
+
+.jumbotron {
+  background-color: rgb(40, 4, 7);
+}
+.container {
+  color: white;
 }
