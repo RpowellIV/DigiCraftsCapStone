@@ -5,19 +5,17 @@
   widows: 150px;
   background-color: #20457c;
 }
-.head {
+.head-links {
   display: flex;
-}
-.home {
-  justify-content: left;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-end;
 }
 .leaderboard {
-  justify-content: center;
   padding: 25px, 25px, 25px, 25px;
   color: black;
 }
 .logout {
-  justify-content: right;
   padding: 25px, 25px, 25px, 25px;
   color: black;
 }

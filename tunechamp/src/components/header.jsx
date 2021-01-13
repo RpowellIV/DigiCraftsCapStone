@@ -5,8 +5,8 @@ import '../styles/header.css'
 let Header = () => { 
 
     return (
-        <nav className='head'>
-            <div>
+        <nav>
+            <div className='head-links'>
                 <Link to='/home' className='home'>
                     <img className='logo' src={TuneChamp} alt="TuneChamp test logo"></img>
                 </Link>
