@@ -1,6 +1,7 @@
 import React from 'react';
+import PLaylist from './Playlist'
 
-const Home=()=>{
+const Home=({ spotify })=>{
      return(
          <div>
              <h1>How to get started</h1>
@@ -13,8 +14,10 @@ const Home=()=>{
                 <li>Choose the correct answer from 4 given artist/song combinations.</li>
                 <li>Each correct answer will give you a point.</li>
                 <li>Score points and compare to your friends on the Leaderboard!</li>
-             </ul>
+             </ul>  
+             <PLaylist spotify={spotify} />           
          </div>
+         
      )
 }
  export default Home;

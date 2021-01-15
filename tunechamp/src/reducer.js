@@ -1,6 +1,7 @@
 export const initialState = {
     user:null,
     playslists: [],
+    random:null,
     playing: false,
     item: null,
     //remove after development
@@ -18,15 +19,23 @@ const reducer = (state, action) => {
                 ...state,
                 user: action.user
             };
+
         case 'SET_TOKEN':
             return {
                 ...state,
                 token: action.token
             };
+
         case 'SET_PLAYLISTS':
             return {
                 ...state,
                 playlists: action.playlists
+            };
+
+        case 'SET_RANDOM':
+            return {
+                ...state,
+                random: action.random
             };
         default:
             return state;
