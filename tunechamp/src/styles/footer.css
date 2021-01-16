@@ -1,8 +1,7 @@
 .foot {
   background-color: #20457c;
   color: black;
-  padding: 50px;
-  display: flex;
-  justify-content: left;
-  align-items: flex-start;
+}
+.text {
+  width: 100%;
 }
