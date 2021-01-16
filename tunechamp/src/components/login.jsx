@@ -86,8 +86,8 @@ function Login() {
                         <p className="lead">THE RIGHT GAME FOR GAME NIGHT...</p>
                     </div>
                 </div>
-                {token ? ( <Playlist spotify={spotify}/>) : (<a href={loginUrl}>LOGIN WITH SPOTIFY TEST</a>)}
-                {/* <a href={loginUrl}>LOGIN WITH SPOTIFY TEST</a> */}
+                {/* {token ? ( <Playlist spotify={spotify}/>) : (<a href={loginUrl}>LOGIN WITH SPOTIFY TEST</a>)} */}
+                <a href={loginUrl}>LOGIN WITH SPOTIFY TEST</a>
                 {/* <LinkButton to='/home'> ------------</LinkButton> */}
             </div>
     )

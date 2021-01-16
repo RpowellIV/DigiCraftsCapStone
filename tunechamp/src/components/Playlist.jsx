@@ -15,16 +15,7 @@ function Playlist({ spotify }) {
 
     const[{ random }, dispatch] = useDataLayerValue();
 
-let songPick = (track) => {
-    let trackList =  Object.entries(track);
-    console.log('songPick>>>',trackList.items)
-    console.log('object>>>',trackList.items)
-    console.log('limit>>>',trackList.limit)
-}
-
 console.log('random>>>',{random})
-console.log('randomArray>>>',songPick({random}))
-// let randomPick = songPick(random)
 
     return (
         <div>
@@ -34,7 +25,8 @@ console.log('randomArray>>>',songPick({random}))
             <button>THREE</button>
             <button>FOUR</button>
         <div>
-            {random.tracks.items.map((item) => (<SongRow track={item.items} />))}
+            {/* {random.tracks.items.map((item) => (<SongRow track={item.items} />))} */}
+            {random && random.tracks ? random.tracks.items.map((item, index) => <SongRow key={`${item}-${index}`} track={item.items} />) : '' }
         </div>
 
         </div>
