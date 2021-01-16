@@ -15,7 +15,7 @@ function Login() {
   // const [token, setToken] = useState(null);
     const[{ user, token }, dispatch] = useDataLayerValue();
   // Runs code based on a given condition
-//   useEffect(() => {
+  useEffect(() => {
     const hash = getTokenFromUrl();
     //removes token info from url
     window.location.hash = "";
@@ -62,7 +62,7 @@ function Login() {
       })
 
     }
-  // }, []);
+  }, []);
 
 
   console.log(`user >>>`, user);

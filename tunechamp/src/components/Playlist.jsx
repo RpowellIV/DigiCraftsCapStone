@@ -1,33 +1,33 @@
 import axios from 'axios'
-import { loginUrl } from '../spotify'
-import { getTokenFromUrl } from '../spotify';
-import SpotifyWebApi from "spotify-web-api-js";
+import React from 'react';
 import { useDataLayerValue } from "../DataLayer"
 import SongRow from './SongRow'
 
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
   }
-let rightAnswer = getRandomInt(1,4)
+let rightAnswer = getRandomInt(1,20)
 console.log(rightAnswer) 
 
-function Playlist({ spotify }) {
+    // pick 4 random songs our of the 20
+        // get random integer
+        // check that it's not duplicate
+        // add item to the array of 4 items
+    // pick 1 song out of the 4 songs as the right answer 
+    // save that song ID as the "right_answer"
+    // render all 4 songs with buttons 
+    // when user clicks the button that matches the "right_answer" --> register win
+
+function Playlist() {
 
     const[{ random }, dispatch] = useDataLayerValue();
 
 console.log('random>>>',{random})
-
     return (
-        <div>
-            <p> TEST</p>
-            <button>ONE</button>
-            <button>TWO</button>
-            <button>THREE</button>
-            <button>FOUR</button>
-        <div>
-            {/* {random.tracks.items.map((item) => (<SongRow track={item.items} />))} */}
-            {random && random.tracks ? random.tracks.items.map((item, index) => <SongRow key={`${item}-${index}`} track={item.items} />) : '' }
-        </div>
+
+        <div className="song__list">
+                {/* {random.tracks.items.map(item => <li>{item.name}</li>)} */}
+                {random.tracks.items.map((item, index) => (<SongRow track={item} song={index} answer={rightAnswer} />))}
 
         </div>
     );

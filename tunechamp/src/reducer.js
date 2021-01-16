@@ -37,6 +37,19 @@ const reducer = (state, action) => {
                 ...state,
                 random: action.random
             };
+
+        case 'SET_PLAYING':
+            return {
+                ...state,
+                playing: action.playing
+            };
+
+            case 'SET_ITEM':
+        return {
+            ...state,
+            item: action.item
+        };
+        
         default:
             return state;
     }
