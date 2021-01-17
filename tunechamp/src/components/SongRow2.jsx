@@ -1,8 +1,7 @@
 import React from 'react';
 import '../styles/SongRow.css';
-import SongRow2 from './SongRow2'
 
-function SongRow({ track, song, answer }) {
+function SongRow2({ track, song, answer }) {
     let correct;
     let message='Not this one';
     if(answer === song) {
@@ -15,23 +14,23 @@ function SongRow({ track, song, answer }) {
         correct = false;
     }
 
-    let nextQuestion;
 
     function handleClick(e) {
         e.preventDefault();
-        if(!correct) {
+        if( correct === false ) {
             console.log('wrong')
             // setTimeout( function ( ) { alert( "GUESS AGAIN" ); }, 10000 );
         } else {
             console.log('GOOD GUESS!')
-            nextQuestion = 'CORRECT'
+            
+            // setTimeout( function ( ) { alert( "CORRECT" ); }, 10000 );
         }
       }
     
 
     return (
-        <div className="songRow" id="songRow">
-            <h1>{nextQuestion}</h1>
+        <div className="songRow2">
+            <h1>GUESS 2</h1>
             <button className="songRow__button" onClick={handleClick}>
             <img className="songRow__album" src={track.album.images[0].url} alt=""/>
             <div className="songRow__info">
@@ -48,4 +47,4 @@ function SongRow({ track, song, answer }) {
     )
 }
 
-export default SongRow;
+export default SongRow2;
