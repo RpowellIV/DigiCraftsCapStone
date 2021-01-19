@@ -1,9 +1,11 @@
 import React from 'react'
+import '../styles/leaderboard.css'
+
 const LeaderBoard=()=>{
     return(
-        <div>
+        <div className='leaders'>
             <h1>Look at those High Scores!</h1>
-            <p></p>
+            <p>How do you compare?</p>
         </div>
     )
 }

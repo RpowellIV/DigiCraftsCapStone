@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios'
-import LinkButton from './linkButton'
+import LinkButton from './LinkButton'
 import '../styles/login.css'
 import { loginUrl } from '../spotify'
 import { getTokenFromUrl } from '../spotify';
