@@ -1,12 +1,12 @@
-import React from 'react'
-import "./Player.css"
+import React from 'react';
+import './styles/Player.css';
 
 function Player({ spotify }) {
-    return (
-        <div>
-            <h1>SPOTIFY CLONE</h1>
-        </div>
-    )
+  return (
+    <div>
+      <h1>SPOTIFY CLONE</h1>
+    </div>
+  );
 }
 
-export default Player
+export default Player;
