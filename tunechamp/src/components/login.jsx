@@ -23,25 +23,26 @@ function Login() {
     //pulls token to push through useState
     const _token = hash.access_token;
 
-    if (_token) {
-      dispatch ({
-        type: 'SET_TOKEN',
-        token: _token
-      })
 
-      // setToken(_token)
+  if (_token) {
+    dispatch({
+      type: 'SET_TOKEN',
+      token: _token,
+    });
 
-      spotify.setAccessToken(_token);
+    // setToken(_token)
 
       //Gets all spotify info for logged in person
       spotify.getMe()
         .then(user =>{
 
-        dispatch({
-          type: 'SET_USER',
-          user: user
-        })
+    //Gets all spotify info for logged in person
+    spotify.getMe().then((user) => {
+      dispatch({
+        type: 'SET_USER',
+        user: user,
       });
+    });
 
       spotify.searchTracks('Love') 
         .then((random) =>{
