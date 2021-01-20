@@ -32,7 +32,7 @@ console.log("test>>>",fourSongs)
         <div className="song__list">
                 {/* {random.tracks.items.map(item => <li>{item.name}</li>)} */}
                 {fourSongs.map((item, index) => (<SongRow track={item} song={index} answer={rightAnswer} />))}
-                {random.tracks.items.map((item, index) => (<SongRow track={item} song={index} answer={rightAnswer} />))}
+                {/* {random.tracks.items.map((item, index) => (<SongRow track={item} song={index} answer={rightAnswer} />))} */}
 
         </div>
     );

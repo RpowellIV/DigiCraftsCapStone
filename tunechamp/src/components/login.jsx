@@ -31,11 +31,7 @@ function Login() {
     });
 
     // setToken(_token)
-
-      //Gets all spotify info for logged in person
-    spotify.getMe()
-        .then(user =>{
-
+    spotify.setAccessToken(_token);
     //Gets all spotify info for logged in person
     spotify.getMe().then((user) => {
       dispatch({
@@ -61,6 +57,7 @@ function Login() {
           playlists: playlists
         })
       })
+    }
   }, []);
 
 
@@ -91,7 +88,5 @@ function Login() {
                 {/* <LinkButton to='/home'> ------------</LinkButton> */}
             </div>
     )
-}
-  });
-}
+  };
 export default Login;
