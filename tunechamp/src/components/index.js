@@ -4,6 +4,9 @@ import Home from './Home'
 import TuneChamp from './TuneChamp'
 import LeaderBoard from './LeaderBoard'
 import GameBoard from './GameBoard'
+import LinkButton from './LinkButton'
+import SongRow from './SongRow'
 import Footer from './Footer'
 
-export { Header, Login, Home, TuneChamp, LeaderBoard, GameBoard, Footer };
+export { Header, Login, Home, TuneChamp, LeaderBoard, GameBoard, SongRow, LinkButton, Footer };
+
