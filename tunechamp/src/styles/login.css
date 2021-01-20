@@ -16,10 +16,12 @@
 
 .login {
   background-color: rgb(40, 4, 7);
+  height: 100%;
 }
 
 .jumbotron {
   background-color: rgb(40, 4, 7);
+  margin: 0px;
 }
 .container {
   color: white;

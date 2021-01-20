@@ -1,8 +1,10 @@
 import React from 'react';
+import Playlist from './Playlist';
+import '../styles/home.css';
 
-const Home = () => {
+const Home = ({ spotify }) => {
   return (
-    <div>
+    <div className='home'>
       <h1>How to get started</h1>
       <p>After you've logged into Spotify, choose to start to the game.</p>
       <h1>How to Play</h1>
@@ -14,6 +16,7 @@ const Home = () => {
         <li>Each correct answer will give you a point.</li>
         <li>Score points and compare to your friends on the Leaderboard!</li>
       </ul>
+      <Playlist spotify={spotify} />
     </div>
   );
 };

@@ -10,12 +10,13 @@
   width: 100%;
   justify-content: space-between;
   align-items: flex-end;
+  background-color: #20457c;
 }
 .leaderboard {
   padding: 25px, 25px, 25px, 25px;
   color: black;
 }
 .logout {
-  padding: 25px, 25px, 25px, 25px;
+  padding-right: 25px;
   color: black;
 }
