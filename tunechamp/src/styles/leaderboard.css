@@ -1,4 +1,47 @@
-.leaders {
-  background-color: rgb(40, 4, 7);
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.leaderboardPage {
+  background-color: black;
+  height: 100%;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.leaderboardPage__title {
+  display: flex;
+  justify-content: center;
   color: white;
+  padding-bottom: 60px;
+  padding-top: 30px;
+}
+
+.leaderboardPage__columns {
+  display: flex;
+  justify-content: space-around;
+  color: yellow;
+  font-weight: 700;
+  font-size: 12px;
+  margin: 0 30% 0 30%;
+}
+
+.leaderboardPage__footer {
+  color: white;
+  display: flex;
+  justify-content: center;
+  font-size: 50px;
+}
+
+.leaderboardPage__Icon {
+  -webkit-animation: rotation 1.5s infinite linear;
+}
+
+@keyframes rotation {
+  0% {
+    -webkit-transform: rotate(25deg);
+  }
+  50% {
+    -webkit-transform: rotate(-25deg);
+  }
+  100% {
+    -webkit-transform: rotate(25deg);
+  }
 }
