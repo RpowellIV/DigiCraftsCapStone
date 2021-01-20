@@ -1,9 +1,7 @@
 import React from 'react';
-<<<<<<< HEAD
 import Playlist from './Playlist'
-=======
 import '../styles/home.css'
->>>>>>> development
+
 
 const Home=({ spotify })=>{
      return(
