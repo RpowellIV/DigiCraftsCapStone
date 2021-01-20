@@ -1,9 +1,13 @@
 import React from 'react';
+<<<<<<< HEAD
 import Playlist from './Playlist'
+=======
+import '../styles/home.css'
+>>>>>>> development
 
 const Home=({ spotify })=>{
      return(
-         <div>
+         <div className='home'>
              <h1>How to get started</h1>
              <p>
                 After you've logged into Spotify, choose to start to the game.
