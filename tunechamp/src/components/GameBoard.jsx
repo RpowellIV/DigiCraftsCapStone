@@ -1,11 +1,20 @@
-import React from 'react'
+import React from 'react';
+import { loginUrl } from '../spotify';
+import { useDataLayerValue } from '../DataLayer';
+import Playlist from './Playlist';
 
-function GameBoard() {
-    return (
-        <div>
-            
-        </div>
-    )
+function GameBoard({ spotify }) {
+  const [{ user, token }, dispatch] = useDataLayerValue();
+  console.log('GAMEBOARD>>>>', token);
+  return (
+    <div>
+      {token ? (
+        <Playlist spotify={spotify} />
+      ) : (
+        <a href={loginUrl}>LOGIN WITH SPOTIFY TEST</a>
+      )}
+    </div>
+  );
 }
 
-export default GameBoard
+export default GameBoard;
