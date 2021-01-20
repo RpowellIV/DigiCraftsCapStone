@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios'
 import LinkButton from './LinkButton'
-import '../styles/login.css'
+import '../styles/Login.css'
 import { loginUrl } from '../spotify'
 import { getTokenFromUrl } from '../spotify';
 import SpotifyWebApi from "spotify-web-api-js";

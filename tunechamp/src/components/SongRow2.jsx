@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/SongRow.css';
+import SongRow from './SongRow'
 
 function SongRow2({ track, song, answer }) {
     let correct;
