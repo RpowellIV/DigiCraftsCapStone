@@ -1,17 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import axios from 'axios';
-import LinkButton from './LinkButton';
 import '../styles/Login.css';
 import { loginUrl } from '../spotify';
 import { getTokenFromUrl } from '../spotify';
 import SpotifyWebApi from 'spotify-web-api-js';
 import { useDataLayerValue } from '../DataLayer';
-import Playlist from './Playlist';
 
 const spotify = new SpotifyWebApi();
 
 function Login() {
-  // const [token, setToken] = useState(null);
   const [{ user, token }, dispatch] = useDataLayerValue();
   // Runs code based on a given condition
   useEffect(() => {
@@ -54,6 +51,24 @@ function Login() {
         });
       });
 
+      spotify.searchTracks('rock').then((question2) => {
+        console.log('Q2>>>', question2);
+
+        dispatch({
+          type: 'SET_QUESTION_2',
+          question2: question2,
+        });
+      });
+
+      spotify.getPlaylistTracks('37i9dQZF1DX186v583rmzp').then((question3) => {
+        console.log('Q3>>>', question3);
+
+        dispatch({
+          type: 'SET_QUESTION_3',
+          question3: question3,
+        });
+      });
+
       spotify.getUserPlaylists().then((playlists) => {
         dispatch({
           type: 'SET_PLAYLISTS',
@@ -61,21 +76,22 @@ function Login() {
         });
       });
     }
-  }, []);
+  }, [dispatch]);
+
+  // console.log(`user >>>`, user);
+  // console.log(`token >>>`, token);
 
   const sendUser = async () => {
-    console.log(user);
-    if (user) {
-      const res = await axios.post('http://localhost:3001/user', {
-        user: user,
-        token: token,
-      });
-      console.log(res);
-    }
+    const res = await axios.post('http://localhost:3001/user', {
+      user: user,
+      token: token,
+    });
+    console.log(res);
   };
 
   sendUser();
 
+  // let Login = () => {
   return (
     <div className='login'>
       <div className='jumbotron jumbotron-fluid'>
@@ -85,9 +101,8 @@ function Login() {
         </div>
       </div>
       {token ? <h1>TOKEN</h1> : <a href={loginUrl}>LOGIN WITH SPOTIFY TEST</a>}
-      {/* <a href={loginUrl}>LOGIN WITH SPOTIFY TEST</a> */}
-      {/* <LinkButton to='/home'> ------------</LinkButton> */}
     </div>
   );
 }
+
 export default Login;

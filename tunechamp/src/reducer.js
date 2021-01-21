@@ -4,6 +4,8 @@ export const initialState = {
   random: null,
   playing: false,
   item: null,
+  question2: null,
+  question3: null,
   //remove after development
   token: null,
   leaderboard: null,
@@ -55,6 +57,17 @@ const reducer = (state, action) => {
       return {
         ...state,
         leaderboard: action.leaderboard,
+      };
+    case 'SET_QUESTION_2':
+      return {
+        ...state,
+        question2: action.question2,
+      };
+
+    case 'SET_QUESTION_3':
+      return {
+        ...state,
+        question3: action.question3,
       };
 
     default:
