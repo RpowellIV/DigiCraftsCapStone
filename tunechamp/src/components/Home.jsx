@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Playlist from './Playlist'
 import '../styles/Home.css'
 
@@ -16,7 +17,7 @@ const Home=({ spotify })=>{
                 <li>Each correct answer will give you a point.</li>
                 <li>Score points and compare to your friends on the Leaderboard!</li>
              </ul>  
-             <Playlist spotify={spotify} />           
+             <Link to='/gameboard' className='gameboard'>GAMEBOARD</Link>
          </div>
          
      )
