@@ -26,7 +26,7 @@ function GameBoard({ spotify }) {
           <Question9 key='9' />
           <Question10 key='10' />
         </div>
-      </div> ):(<a href={loginUrl}>LOGIN WITH SPOTIFY TEST</a>)}
+      </div> ):(<a href={loginUrl}>LOGIN WITH SPOTIFY TESTING</a>)}
   </div>
   );
 }
