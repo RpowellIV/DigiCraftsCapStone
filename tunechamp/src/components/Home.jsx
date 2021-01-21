@@ -15,7 +15,7 @@ const Home=({ spotify })=>{
                 <li>You'll be given four songs</li>
                 <li>Choose the correct answer from 4 given artist/song combinations.</li>
                 <li>Each correct answer will give you a point.</li>
-                <li>Score points and compare to your friends on the Leaderboard!</li>
+                <li>Score points and compare to your friends on the Leaderboard! </li>
              </ul>  
              <Link to='/gameboard' className='gameboard'>GAMEBOARD</Link>
          </div>
