@@ -1,10 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React from 'react';
 import { Login, Header, Home, LeaderBoard } from '.';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { getTokenFromUrl } from '../spotify';
-import SpotifyWebApi from 'spotify-web-api-js';
-import { useDataLayerValue } from '../DataLayer';
 
 const App = () => {
   return (
@@ -20,6 +16,10 @@ const App = () => {
             <Home />
           </Route>
           <Route path='/leaderboard'>
+            <Header />
+            <LeaderBoard />
+          </Route>
+          <Route path='/gameboard'>
             <Header />
             <LeaderBoard />
           </Route>

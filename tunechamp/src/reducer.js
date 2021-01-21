@@ -2,6 +2,8 @@ export const initialState = {
     user:null,
     playslists: [],
     random:null,
+    question2:null,
+    question3:null,
     playing: false,
     item: null,
     //remove after development
@@ -9,7 +11,7 @@ export const initialState = {
 };
 
 const reducer = (state, action) => {
-    console.log(action);
+    // console.log(action);
 
     // Action -> type, [payload]
 
@@ -38,6 +40,18 @@ const reducer = (state, action) => {
                 random: action.random
             };
 
+        case 'SET_QUESTION_2':
+            return {
+                ...state,
+                question2: action.question2
+            };
+
+        case 'SET_QUESTION_3':
+        return {
+            ...state,
+            question3: action.question3
+        };
+        
         case 'SET_PLAYING':
             return {
                 ...state,

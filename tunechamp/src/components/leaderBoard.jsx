@@ -7,10 +7,11 @@ function LeaderBoard() {
   // const [playerDataJSON, setPlayerDataJSON] = useState('');
   const [playerInfo, setPlayerInfo] = useState([]);
 
-  const fetchPlayerData = () => {
+   let fetchPlayerData = () => {
     return axios
       .get('http://localhost:3001/leaderboard')
       .then(({ data }) => {
+        console.log(data);
         return data;
       })
       .catch((err) => {
@@ -19,8 +20,11 @@ function LeaderBoard() {
   };
 
   useEffect(() => {
+
+
     fetchPlayerData().then((playerData) => {
       // setPlayerDataJSON(JSON.stringify(playerData, null, 2));
+      console.log(playerData.allUsers)
       setPlayerInfo(playerData.allUsers);
     });
   }, []);

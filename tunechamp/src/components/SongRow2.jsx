@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/SongRow.css';
 import SongRow from './SongRow'
 
-function SongRow2({ track, song, answer }) {
+function SongRow2({ tracks, song, answer }) {
     let correct;
     let message='Not this one';
     if(answer === song) {
@@ -30,17 +30,17 @@ function SongRow2({ track, song, answer }) {
     
 
     return (
-        <div className="songRow2">
-            <h1>GUESS 2</h1>
+        <div className="songRow" id="songRow">
+            {/* <h1>GUESS 2</h1> */}
             <button className="songRow__button" onClick={handleClick}>
-            <img className="songRow__album" src={track.album.images[0].url} alt=""/>
+            <img className="songRow__album" src={tracks.track.album.images[0].url} alt=""/>
             <div className="songRow__info">
-                <h1>{track.name}</h1>
-                <h1>{song}</h1>
-                <h1>{message}</h1>
+                <h1>{tracks.track.name}</h1>
+                {/* <h1>{song}</h1>
+                <h1>{message}</h1> */}
                 <p>
-                    {track.artists.map((artist) => artist.name).join(", ")} -{" "}
-                    {track.album.name}
+                    {tracks.track.artists.map((artist) => artist.name).join(", ")} -{" "}
+                    {tracks.track.album.name}
                 </p>
             </div>
             </button>
