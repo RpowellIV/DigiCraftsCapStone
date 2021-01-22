@@ -13,13 +13,10 @@ const container = document.getElementById('root');
 ReactDOM.render(
   <React.StrictMode>
     <DataLayer initialState={initialState} reducer={reducer}>
-      {/* <Provider store={store}> */}
       <App />
-      {/* </Provider> */}
     </DataLayer>
   </React.StrictMode>,
   container
-  // document.getElementById('root')
 );
 
 debugContextDevtool(container);

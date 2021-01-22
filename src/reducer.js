@@ -11,7 +11,7 @@ export const initialState = {
   leaderboard: null,
 };
 
-const reducer = (state, action) => {
+const reducer = (state = initialState, action) => {
   console.log(action);
 
   // Action -> type, [payload]
@@ -53,6 +53,12 @@ const reducer = (state, action) => {
         item: action.item,
       };
 
+    case 'SET_QUESTION_3':
+      return {
+        ...state,
+        question3: action.question3,
+      };
+
     case 'SET_LEADERBOARD':
       return {
         ...state,
@@ -62,12 +68,6 @@ const reducer = (state, action) => {
       return {
         ...state,
         question2: action.question2,
-      };
-
-    case 'SET_QUESTION_3':
-      return {
-        ...state,
-        question3: action.question3,
       };
 
     default:
