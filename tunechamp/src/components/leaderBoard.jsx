@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import '../styles/LeaderBoard.css';
+import '../styles/Leaderboard.css';
 import axios from 'axios';
 import MusicNoteRoundedIcon from '@material-ui/icons/MusicNoteRounded';
 

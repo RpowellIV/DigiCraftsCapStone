@@ -1,5 +1,6 @@
 import React from 'react';
 import Playlist from './Playlist'
+import Player from './Player'
 import '../styles/Home.css'
 
 const Home=({ spotify })=>{
@@ -16,6 +17,7 @@ const Home=({ spotify })=>{
                 <li>Each correct answer will give you a point.</li>
                 <li>Score points and compare to your friends on the Leaderboard!</li>
              </ul>  
+             <Player />
              <Playlist spotify={spotify} />           
          </div>
          
