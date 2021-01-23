@@ -8,6 +8,7 @@ import LinkButton from './LinkButton';
 import SongRow from './SongRow';
 import SongRow2 from './SongRow2';
 import Footer from './Footer';
+import Player from './Player';
 import Playlist from './Playlist'
 import Question1 from './Questions/Question1'
 import Question2 from './Questions/Question2'
@@ -29,6 +30,7 @@ export {
   GameBoard,
   SongRow,
   SongRow2,
+  Player,
   LinkButton,
   Footer,
   Playlist,

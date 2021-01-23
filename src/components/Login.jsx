@@ -42,16 +42,16 @@ function Login() {
         });
       });
 
-      spotify.searchTracks('Love').then((random) => {
-        console.log('track>>>', random);
+      spotify.getPlaylistTracks('37i9dQZF1DX56bqlsMxJYR').then((question1) => {
+        console.log('Q1>>>', question1);
 
         dispatch({
-          type: 'SET_RANDOM',
-          random: random,
+          type: 'SET_QUESTION_1',
+          question1: question1,
         });
       });
 
-      spotify.searchTracks('rock').then((question2) => {
+      spotify.getPlaylistTracks('37i9dQZF1DX7SeoIaFyTmA').then((question2) => {
         console.log('Q2>>>', question2);
 
         dispatch({
@@ -69,6 +69,69 @@ function Login() {
         });
       });
 
+      spotify.getPlaylistTracks('37i9dQZF1DXcBWIGoYBM5M').then((question4) => {
+        console.log('Q4>>>', question4);
+
+        dispatch({
+          type: 'SET_QUESTION_4',
+          question4: question4,
+        });
+      });
+
+      spotify.getPlaylistTracks('37i9dQZF1DX9Ozxs05KifN').then((question5) => {
+        console.log('Q5>>>', question5);
+
+        dispatch({
+          type: 'SET_QUESTION_5',
+          question5: question5,
+        });
+      });
+
+      spotify.getPlaylistTracks('37i9dQZF1DXaqCgtv7ZR3L').then((question6) => {
+        console.log('Q6>>>', question6);
+
+        dispatch({
+          type: 'SET_QUESTION_6',
+          question6: question6,
+        });
+      });
+
+      spotify.getPlaylistTracks('37i9dQZF1DXbYM3nMM0oPk').then((question7) => {
+        console.log('Q7>>>', question7);
+
+        dispatch({
+          type: 'SET_QUESTION_7',
+          question7: question7,
+        });
+      });
+
+      spotify.getPlaylistTracks('37i9dQZF1DWXRqgorJj26U').then((question8) => {
+        console.log('Q8>>>', question8);
+
+        dispatch({
+          type: 'SET_QUESTION_8',
+          question8: question8,
+        });
+      });
+
+      spotify.getPlaylistTracks('37i9dQZF1DX6VDO8a6cQME').then((question9) => {
+        console.log('Q9>>>', question9);
+
+        dispatch({
+          type: 'SET_QUESTION_9',
+          question9: question9,
+        });
+      });
+
+      spotify.getPlaylistTracks('37i9dQZF1DX5gQonLbZD9s').then((question10) => {
+        console.log('Q10>>>', question10);
+
+        dispatch({
+          type: 'SET_QUESTION_10',
+          question10: question10,
+        });
+      });
+
       spotify.getUserPlaylists().then((playlists) => {
         dispatch({
           type: 'SET_PLAYLISTS',
@@ -76,10 +139,13 @@ function Login() {
         });
       });
     }
-  }, [dispatch]);
+  }, [token, user, dispatch]);
 
-  // console.log(`user >>>`, user);
-  // console.log(`token >>>`, token);
+  useEffect(() => {
+    if(user){
+      sendUser();
+    }
+  }, [token, user]);
 
   const sendUser = async () => {
     const res = await axios.post('http://localhost:3001/user', {
@@ -89,9 +155,6 @@ function Login() {
     console.log(res);
   };
 
-  sendUser();
-
-  // let Login = () => {
   return (
     <div className='login'>
       <div className='jumbotron jumbotron-fluid'>
@@ -100,7 +163,7 @@ function Login() {
           <p className='lead'>THE RIGHT GAME FOR GAME NIGHT...</p>
         </div>
       </div>
-      {token ? <h1>TOKEN</h1> : <a href={loginUrl}>LOGIN WITH SPOTIFY TEST</a>}
+      {token ? <h1>LOGGED IN</h1> : <a href={loginUrl}>LOGIN WITH SPOTIFY TEST</a>}
     </div>
   );
 }

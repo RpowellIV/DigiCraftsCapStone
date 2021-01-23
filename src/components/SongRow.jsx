@@ -1,6 +1,5 @@
 import React from 'react';
 import '../styles/SongRow.css';
-import SongRow2 from './SongRow2'
 
 function SongRow({ track, song, answer, handleIsClicked, isClicked, isRightOrWrong }) {
 
@@ -9,8 +8,7 @@ function SongRow({ track, song, answer, handleIsClicked, isClicked, isRightOrWro
     if(answer === song) {
         console.log('Right Answer')
         message='Correct!'
-        correct = true;
-        
+        correct = true;  
     } else {
         console.log('Not this one')
         correct = false;
@@ -38,15 +36,16 @@ function SongRow({ track, song, answer, handleIsClicked, isClicked, isRightOrWro
             <img className="songRow__album" src={track.album.images[0].url} alt=""/>
             <div className="songRow__info">
                 <h1>{!isClicked ? (track.name) : isClicked && answer===song ? (`CORRECT`) : isClicked && answer!==song ? (`WRONG!`): null}</h1> 
+                {!isClicked ?
                 <p>
                     {track.artists.map((artist) => artist.name).join(", ")} -{" "}
                     {track.album.name}
-                </p>
+                </p> :
+                isClicked && answer===song ? (<p>CORRECT!</p>) : isClicked && answer!==song ? (<p>WRONG!</p>): null}
             </div>
             </button>
         </div>
         </>
-    )
-}
+    )};
 
 export default SongRow;
