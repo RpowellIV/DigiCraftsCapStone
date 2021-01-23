@@ -25,7 +25,6 @@ function Question1() {
 
     return (
         <div className="song__box">
-            <Player />
             <h1 className="song__player">{!isRightOrWrong && isClicked ? ('WRONG GUESS!') : isRightOrWrong && isClicked ? ('CORRECT') : ('PICK A SONG 1') }</h1>
             <div className="song__list">
                 {fourSongs.map((item, index) => (<SongRow isClicked={isClicked} isRightOrWrong={isRightOrWrong} handleIsClicked={handleIsClicked} track={item} song={index} answer={rightAnswer} />))}

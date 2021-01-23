@@ -1,7 +1,7 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import '../styles/SongRow.css';
 
-function SongRow2({ tracks, song, answer, handleIsClicked, isClicked, isRightOrWrong }) {
+function SongRow2({ tracks, song, answer, handleIsClicked, isClicked, isRightOrWrong, getPopPlayer }) {
   
   let correct;
   let message = 'Not this one';
@@ -27,7 +27,11 @@ function SongRow2({ tracks, song, answer, handleIsClicked, isClicked, isRightOrW
     }
     handleIsClicked(isRightOrWrong);
   }
-
+  useEffect(()=>{
+    if(getPopPlayer){
+      getPopPlayer(tracks.track.id)
+    }
+  },[getPopPlayer])
   return (
     <div className="songRow" id="songRow">
         <button id="songButton" 
