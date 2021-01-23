@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState}  from 'react';
 import { useDataLayerValue } from '../../DataLayer'
 import SongRow2 from '../SongRow2'
 
@@ -10,9 +10,17 @@ let rightAnswer = getRandomInt(1,4);
 
 function Question7() {
 
-    const[{ question3 }, dispatch] = useDataLayerValue();
-    
-    var songChoice = question3.items.splice(0, 4);
+    const[{ question7 }, dispatch] = useDataLayerValue();
+    const [isClicked , setIsClicked]= useState(false);
+    const [isRightOrWrong , setIsRightOrWrong]= useState(null);
+
+    const handleIsClicked = () => {
+        setIsClicked(true);
+        setIsRightOrWrong(isRightOrWrong);
+        console.log('HANDLE HAS BEEN CLICKED!')
+    }
+
+    var songChoice = question7.items.splice(0, 4);
     console.log(`TEST5>>>`,songChoice)
  
 
@@ -20,7 +28,7 @@ function Question7() {
         <div className="song__box">
             <h1 className="song__player">PICK A SONG 7</h1>
             <div className="song__list">
-            {songChoice.map((item, index) => (<SongRow2 key={index} tracks={item} song={index} answer={rightAnswer} />))}
+            {songChoice.map((item, index) => (<SongRow2 isClicked={isClicked} isRightOrWrong={isRightOrWrong} handleIsClicked={handleIsClicked} tracks={item} song={index} answer={rightAnswer} />))}
             </div>
         </div>
     );
