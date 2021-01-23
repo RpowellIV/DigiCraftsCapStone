@@ -42,7 +42,7 @@ function Login() {
         });
       });
 
-      spotify.searchTracks('Love').then((question1) => {
+      spotify.getPlaylistTracks('37i9dQZF1DX56bqlsMxJYR').then((question1) => {
         console.log('Q1>>>', question1);
 
         dispatch({
@@ -51,7 +51,7 @@ function Login() {
         });
       });
 
-      spotify.searchTracks('rock').then((question2) => {
+      spotify.getPlaylistTracks('37i9dQZF1DX7SeoIaFyTmA').then((question2) => {
         console.log('Q2>>>', question2);
 
         dispatch({
