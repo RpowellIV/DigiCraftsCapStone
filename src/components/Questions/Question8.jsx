@@ -1,6 +1,7 @@
 import React, {useState, useEffect}  from 'react';
 import { useDataLayerValue } from '../../DataLayer'
 import SongRow2 from '../SongRow2'
+import Player from '../Player'
 
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
@@ -15,6 +16,7 @@ function Question8() {
     const [isRightOrWrong , setIsRightOrWrong]= useState(null);
     const [isSongs, setSongs] = useState([])
     const [isAnswered, setAnswered] =useState('PICK A SONG 8')
+    const [popPlayer,setPopPlayer]=useState(null);
 
     const handleIsClicked = (answer) => {
         setIsClicked(true);
@@ -30,8 +32,11 @@ function Question8() {
 
     useEffect(() => {
         populateSongChoice();
+        getPopPlayer();
     }, []);
-
+    const getPopPlayer=(choice)=>{
+        setPopPlayer(choice)
+    }
     const populateSongChoice = () => {
         var songChoice = question8.items.splice(0, 4);
         console.log("TEST8>>>",songChoice)
@@ -40,9 +45,10 @@ function Question8() {
 
     return (
         <div className="song__box">
+            <Player track= {popPlayer}/>
             <h1 className="song__player">{isAnswered}</h1>
             <div className="song__list">
-            {isSongs.map((item, index) => (<SongRow2 key ={index} isClicked={isClicked} isRightOrWrong={isRightOrWrong} handleIsClicked={handleIsClicked} tracks={item} song={index} answer={rightAnswer}/>))}
+            {isSongs.map((item, index) => (<SongRow2 key ={index} getPopPlayer={getPopPlayer} isClicked={isClicked} isRightOrWrong={isRightOrWrong} handleIsClicked={handleIsClicked} tracks={item} song={index} answer={rightAnswer}/>))}
             </div>
         </div>
     );
