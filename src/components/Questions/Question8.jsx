@@ -13,22 +13,36 @@ function Question8() {
     const[{ question8 }, dispatch] = useDataLayerValue();
     const [isClicked , setIsClicked]= useState(false);
     const [isRightOrWrong , setIsRightOrWrong]= useState(null);
+    const [isSongs, setSongs] = useState([])
+    const [isAnswered, setAnswered] =useState('PICK A SONG 8')
 
-    const handleIsClicked = () => {
+    const handleIsClicked = (answer) => {
         setIsClicked(true);
-        setIsRightOrWrong(isRightOrWrong);
+        setIsRightOrWrong(answer);
         console.log('HANDLE HAS BEEN CLICKED!')
-    }
+        console.log('Right or Wrong', answer)
+        if (!answer) {
+            setAnswered('WRONG CHOICE')
+        } else if (answer) {
+            setAnswered('CORRECT!!!')
+            }
+        }
 
-    var songChoice = question8.items.splice(0, 4);
-    console.log(`TEST8>>>`,songChoice)
- 
+    useEffect(() => {
+        populateSongChoice();
+    }, []);
+
+    const populateSongChoice = () => {
+        var songChoice = question8.items.splice(0, 4);
+        console.log("TEST8>>>",songChoice)
+        setSongs(songChoice);
+        };
 
     return (
         <div className="song__box">
-            <h1 className="song__player">PICK A SONG 8</h1>
+            <h1 className="song__player">{isAnswered}</h1>
             <div className="song__list">
-            {songChoice.map((item, index) => (<SongRow2 isClicked={isClicked} isRightOrWrong={isRightOrWrong} handleIsClicked={handleIsClicked} tracks={item} song={index} answer={rightAnswer} />))}
+            {isSongs.map((item, index) => (<SongRow2 key ={index} isClicked={isClicked} isRightOrWrong={isRightOrWrong} handleIsClicked={handleIsClicked} tracks={item} song={index} answer={rightAnswer}/>))}
             </div>
         </div>
     );
