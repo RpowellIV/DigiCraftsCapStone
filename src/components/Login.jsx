@@ -76,7 +76,7 @@ function Login() {
         });
       });
     }
-  }, [dispatch]);
+  }, [token, dispatch]);
 
   // console.log(`user >>>`, user);
   // console.log(`token >>>`, token);

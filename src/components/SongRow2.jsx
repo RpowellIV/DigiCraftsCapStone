@@ -30,11 +30,17 @@ function SongRow2({ tracks, song, answer }) {
     <div className='songRow' id='songRow'>
       {/* <h1>GUESS 2</h1> */}
       <button className='songRow__button' onClick={handleClick}>
-        <img
-          className='songRow__album'
-          src={tracks.track.album.images[0].url}
-          alt=''
-        />
+        {tracks &&
+          tracks.track &&
+          tracks.track.album &&
+          tracks.track.album.images[0] && (
+            <img
+              className='songRow__album'
+              src={tracks.track.album.images[0].url}
+              alt=''
+            />
+          )}
+
         <div className='songRow__info'>
           <h1>{tracks.track.name}</h1>
           {/* <h1>{song}</h1>
