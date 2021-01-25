@@ -4,26 +4,26 @@ import '../styles/SongRow.css';
 function SongRow2({ tracks, song, answer, handleIsClicked, isClicked, isRightOrWrong, getPopPlayer }) {
   
   let correct;
-  let message = 'Not this one';
+  // let message = 'Not this one';
   if (answer === song) {
-    console.log('Right Answer');
-    message = 'Correct!';
+    // console.log('Right Answer');
+    // message = 'Correct!';
     correct = true;
   } else {
-    console.log('Not this one');
+    // console.log('Not this one');
     correct = false;
   }
 
   function handleClick(e) {
     e.preventDefault();
     if(!correct) {
-        console.log('wrong')
+        // console.log('wrong')
         isRightOrWrong = false;
-        console.log(isRightOrWrong)
+        // console.log(isRightOrWrong)
     } else {
-        console.log('GOOD GUESS!')
+        // console.log('GOOD GUESS!')
         isRightOrWrong = true;
-        console.log(isRightOrWrong)
+        // console.log(isRightOrWrong)
     }
     handleIsClicked(isRightOrWrong);
   }
