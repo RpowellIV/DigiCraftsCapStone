@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../styles/SongRow.css';
-import SongRow from './SongRow';
 
-function SongRow2({ tracks, song, answer }) {
+function SongRow2({
+  tracks,
+  song,
+  answer,
+  handleIsClicked,
+  isClicked,
+  isRightOrWrong,
+  getPopPlayer,
+}) {
   let correct;
   let message = 'Not this one';
   if (answer === song) {
@@ -16,35 +23,44 @@ function SongRow2({ tracks, song, answer }) {
 
   function handleClick(e) {
     e.preventDefault();
-    if (correct === false) {
+    if (!correct) {
       console.log('wrong');
-      // setTimeout( function ( ) { alert( "GUESS AGAIN" ); }, 10000 );
+      isRightOrWrong = false;
+      console.log(isRightOrWrong);
     } else {
       console.log('GOOD GUESS!');
-
-      // setTimeout( function ( ) { alert( "CORRECT" ); }, 10000 );
+      isRightOrWrong = true;
+      console.log(isRightOrWrong);
     }
+    handleIsClicked(isRightOrWrong);
   }
-
+  useEffect(() => {
+    if (getPopPlayer) {
+      getPopPlayer(tracks.track.id);
+    }
+  }, [getPopPlayer]);
   return (
-    <div className='songRow' id='songRow'>
-      {/* <h1>GUESS 2</h1> */}
-      <button className='songRow__button' onClick={handleClick}>
-        {tracks &&
-          tracks.track &&
-          tracks.track.album &&
-          tracks.track.album.images[0] && (
-            <img
-              className='songRow__album'
-              src={tracks.track.album.images[0].url}
-              alt=''
-            />
-          )}
-
-        <div className='songRow__info'>
-          <h1>{tracks.track.name}</h1>
-          {/* <h1>{song}</h1>
-                <h1>{message}</h1> */}
+    <div className="songRow" id="songRow">
+      <button
+        id="songButton"
+        className={isClicked ? 'songRow__button__clicked' : 'songRow__button'}
+        onClick={!isClicked ? handleClick : null}
+      >
+        <img
+          className="songRow__album"
+          src={tracks.track.album.images[0].url}
+          alt=""
+        />
+        <div className="songRow__info">
+          <h1>
+            {!isClicked
+              ? tracks.track.name
+              : isClicked && answer === song
+              ? `CORRECT`
+              : isClicked && answer !== song
+              ? `WRONG!`
+              : null}
+          </h1>
           <p>
             {tracks.track.artists.map((artist) => artist.name).join(', ')} -{' '}
             {tracks.track.album.name}

@@ -1,7 +1,8 @@
 import React from 'react';
 import { loginUrl } from '../spotify';
 import { useDataLayerValue } from '../DataLayer';
-import { Playlist, Question1, Question2, Question3, Question4, Question5, Question6, Question7, Question8, Question9, Question10 } from './index';
+import { Playlist, Question1, Question2, Question3, Question4, Question5, Question6, Question7, Question8, Question9, Question10, Player } from './index';
+import '../styles/GameBoard.css'
 
 
 function GameBoard({ spotify }) {
@@ -10,10 +11,10 @@ function GameBoard({ spotify }) {
   console.log('GAMEBOARD>>>>', token);
 
   return (
-    <div>
+    <div className='gameBoard'>
     {token ? (
-      <div>
-        <div>
+      <div >
+        <div >
           {/* <Playlist key='0' /> */}
           <Question1 key='1' />
           <Question2 key='2' />
