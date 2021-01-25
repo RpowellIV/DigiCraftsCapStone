@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import '../styles/SongRow.css';
 
 function SongRow2({
@@ -20,8 +20,6 @@ function SongRow2({
     // console.log('Not this one');
     correct = false;
   }
-
-  const [score, setScore] = useState(0);
 
   function handleClick(e) {
     e.preventDefault();

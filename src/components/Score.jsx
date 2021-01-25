@@ -10,7 +10,10 @@ function Score() {
     <div className="score">
       {token ? (
         <>
-          <h1>{user.id}, you scored 100 points!</h1> <br />
+          <h1>
+            {user.id}, you scored {score} points!
+          </h1>{' '}
+          <br />
           <p>
             Go check the leaderboard to see how you favor against everyone else.
           </p>
