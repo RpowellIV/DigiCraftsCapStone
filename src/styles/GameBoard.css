@@ -1,4 +1,35 @@
 .gameBoard {
   background-color: rgb(40, 4, 7);
   color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.gameBoard__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.gameBoard__buttonText {
+  height: 50px;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  font-size: 14px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  line-height: 12px;
+  border: 2px solid;
+  color: #ffffff;
+  background-color: #20457c;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
 }

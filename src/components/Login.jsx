@@ -142,7 +142,7 @@ function Login() {
   }, [token, user, dispatch]);
 
   useEffect(() => {
-    if(user){
+    if (user) {
       sendUser();
     }
   }, [token, user]);
@@ -156,14 +156,18 @@ function Login() {
   };
 
   return (
-    <div className='login'>
-      <div className='jumbotron jumbotron-fluid'>
-        <div className='container'>
-          <h1 className='display-4'>TUNE CHAMP TEST</h1>
-          <p className='lead'>THE RIGHT GAME FOR GAME NIGHT...</p>
+    <div className="login">
+      <div className="jumbotron jumbotron-fluid">
+        <div className="container">
+          <h1 className="display-4">TUNE CHAMP TEST</h1>
+          <p className="lead">THE RIGHT GAME FOR GAME NIGHT...</p>
         </div>
       </div>
-      {token ? <h1>LOGGED IN</h1> : <a href={loginUrl}>LOGIN WITH SPOTIFY TEST</a>}
+      {token ? (
+        <h1>LOGGED IN</h1>
+      ) : (
+        <a href={loginUrl}>LOGIN WITH SPOTIFY TEST</a>
+      )}
     </div>
   );
 }
