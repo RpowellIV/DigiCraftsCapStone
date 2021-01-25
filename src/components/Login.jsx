@@ -26,7 +26,7 @@ function Login() {
         token: _token,
       });
 
-      axios.get('http://localhost:3001/leaderboard').then((response) => {
+      axios.get('https://tunechamp-server.herokuapp.com/leaderboard').then((response) => {
         dispatch({
           type: 'SET_LEADERBOARD',
           leaderboard: response.data.allUsers,
@@ -149,7 +149,7 @@ function Login() {
   }, [token, user]);
 
   const sendUser = async () => {
-    const res = await axios.post('http://localhost:3001/user', {
+    const res = await axios.post('https://tunechamp-server.herokuapp.com/user', {
       user: user,
       token: token,
     });
