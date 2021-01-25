@@ -1,7 +1,12 @@
-.foot {
+.footer {
   background-color: #20457c;
-  color: black;
+  color: white;
+  height: 400px;
+  padding-top: 10px;
 }
 .text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
 }
