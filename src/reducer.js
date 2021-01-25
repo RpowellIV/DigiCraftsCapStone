@@ -14,7 +14,8 @@ export const initialState = {
   question7: null,
   question8: null,
   question9: null,
-  question10: null
+  question10: null,
+  score: 0
 };
 
 const reducer = (state = initialState, action) => {
@@ -118,6 +119,12 @@ const reducer = (state = initialState, action) => {
         return {
           ...state,
           question10: action.question10,
+        };
+
+      case 'SET_SCORE':
+        return {
+          ...state,
+          score: action.score,
         };
 
     default:
