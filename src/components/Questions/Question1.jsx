@@ -27,6 +27,10 @@ function Question1() {
             setAnswered('WRONG CHOICE')
         } else if (answer) {
             setAnswered('CORRECT!!!')
+            dispatch({
+                type: 'SET_SCORE',
+                score: score+100,
+              });
             }
         }
 
