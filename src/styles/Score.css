@@ -1,0 +1,14 @@
+.score {
+  background-color: rgb(40, 4, 7);
+  color: white;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 650px;
+}
+
+.score p {
+  font-size: 20px;
+}

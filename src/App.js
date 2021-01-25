@@ -7,37 +7,43 @@ import {
   Footer,
   GameBoard,
   DeveloperPage,
+  Score,
 } from './components';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 const App = () => {
   return (
     <Router>
-      <div className='y-app'>
+      <div className="y-app">
         <Switch>
-          <Route exact path='/'>
+          <Route exact path="/">
             <Header />
             <Login />
             <Footer />
           </Route>
-          <Route path='/home'>
+          <Route path="/home">
             <Header />
             <Home />
             <Footer />
           </Route>
-          <Route path='/leaderboard'>
+          <Route path="/leaderboard">
             <Header />
             <LeaderBoard />
             <Footer />
           </Route>
-          <Route path='/developers'>
+          <Route path="/developers">
             <Header />
             <DeveloperPage />
             <Footer />
           </Route>
-          <Route path='/gameboard'>
+          <Route path="/gameboard">
             <Header />
             <GameBoard />
+            <Footer />
+          </Route>
+          <Route path="/score">
+            <Header />
+            <Score />
             <Footer />
           </Route>
         </Switch>

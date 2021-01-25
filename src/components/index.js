@@ -10,6 +10,9 @@ import SongRow2 from './SongRow2';
 import Footer from './Footer';
 import Player from './Player';
 import Playlist from './Playlist';
+import Score from './Score';
+import DeveloperCard from './DeveloperCard';
+import DeveloperPage from './DeveloperPage';
 import Question1 from './Questions/Question1';
 import Question2 from './Questions/Question2';
 import Question3 from './Questions/Question3';
@@ -34,6 +37,7 @@ export {
   LinkButton,
   Footer,
   Playlist,
+  Score,
   DeveloperPage,
   DeveloperCard,
   Question1,
