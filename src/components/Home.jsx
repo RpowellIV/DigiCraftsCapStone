@@ -1,7 +1,10 @@
 import React from 'react';
-import '../styles/home.css'
+import { Link } from 'react-router-dom';
+import Playlist from './Playlist'
+import Player from './Player'
+import '../styles/Home.css'
 
-const Home=()=>{
+const Home=({ spotify })=>{
      return(
          <div className='home'>
              <h1>How to get started</h1>
@@ -13,9 +16,11 @@ const Home=()=>{
                 <li>You'll be given four songs</li>
                 <li>Choose the correct answer from 4 given artist/song combinations.</li>
                 <li>Each correct answer will give you a point.</li>
-                <li>Score points and compare to your friends on the Leaderboard!</li>
-             </ul>
+                <li>Score points and compare to your friends on the Leaderboard! </li>
+             </ul>  
+             <Link to='/gameboard' className='gameboard'>GAMEBOARD</Link>
          </div>
+         
      )
 }
  export default Home;
