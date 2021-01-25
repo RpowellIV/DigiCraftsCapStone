@@ -15,53 +15,56 @@ function Question6() {
   const [isRightOrWrong, setIsRightOrWrong] = useState(null);
   const [isSongs, setSongs] = useState([]);
   const [isAnswered, setAnswered] = useState('PICK A SONG 6');
-  const [popPlayer, setPopPlayer] = useState(null);
+  const [popPlayer,setPopPlayer]=useState(null);
+  const [isPlayerReady, setPlayerReady] = useState(false);
 
   const handleIsClicked = (answer) => {
-    let newScore = score;
-    setIsClicked(true);
-    setIsRightOrWrong(answer);
-    // console.log('HANDLE HAS BEEN CLICKED!')
-    // console.log('Right or Wrong', answer)
-    if (!answer) {
-      newScore = newScore - 100;
-      setAnswered('WRONG CHOICE');
-      dispatch({
-        type: 'SET_SCORE',
-        score: newScore,
-      });
-    } else if (answer) {
-      setAnswered('CORRECT!!!');
-      newScore = newScore + 100;
-      dispatch({
-        type: 'SET_SCORE',
-        score: newScore,
-      });
-    }
-    // console.log("SCORE>>>",score)
-  };
-  let loaded = false;
-
+      let newScore = score;
+      setIsClicked(true);
+      setIsRightOrWrong(answer);
+      // console.log('HANDLE HAS BEEN CLICKED!')
+      // console.log('Right or Wrong', answer)
+      if (!answer) {
+          newScore = newScore
+          setAnswered('WRONG CHOICE')
+          dispatch({
+              type: 'SET_SCORE',
+              score: newScore,
+            });
+      } else if (answer) {
+          setAnswered('CORRECT!!!')
+          newScore = newScore+100
+          dispatch({
+              type: 'SET_SCORE',
+              score: newScore,
+            });
+          }
+          // console.log("SCORE>>>",score)
+      }
+  
   useEffect(() => {
-    populateSongChoice();
-    loaded = true;
-    if (loaded) {
-      getPopPlayer();
-    }
+      populateSongChoice();
+      if(isPlayerReady === true) {
+          getPopPlayer();
+      }
   }, []);
 
-  const getPopPlayer = (choice) => {
-    setPopPlayer(choice);
-  };
+  const getPopPlayer=(choice)=>{
+      setPopPlayer(choice)
+  }
   const populateSongChoice = () => {
-    var songChoice = question6.items.splice(0, 4);
-    console.log('TEST6>>>', songChoice);
-    setSongs(songChoice);
-  };
+      var songChoice = question6.items.splice(0, 4);
+      // console.log("TEST1>>>",songChoice)
+      setSongs(songChoice);
+      setPlayerReady(true);
+      };
 
   return (
     <div className="song__box">
-      <Player track={popPlayer} />
+      {isClicked
+              ? null:
+            <Player track= {popPlayer}/>
+            }
       <h1 className="song__player">{isAnswered}</h1>
       <div className="song__list">
         {isSongs.map((item, index) => (

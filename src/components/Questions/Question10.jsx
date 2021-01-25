@@ -17,6 +17,7 @@ function Question10() {
     const [isSongs, setSongs] = useState([])
     const [isAnswered, setAnswered] =useState('PICK A SONG 10')
     const [popPlayer,setPopPlayer]=useState(null);
+    const [isPlayerReady, setPlayerReady] = useState(false);
 
     const handleIsClicked = (answer) => {
         let newScore = score;
@@ -25,7 +26,7 @@ function Question10() {
         // console.log('HANDLE HAS BEEN CLICKED!')
         // console.log('Right or Wrong', answer)
         if (!answer) {
-            newScore = newScore+1
+            newScore = newScore
             setAnswered('WRONG CHOICE')
             dispatch({
                 type: 'SET_SCORE',
@@ -41,28 +42,31 @@ function Question10() {
             }
             // console.log("SCORE>>>",score)
         }
-    let loaded = false;
     
     useEffect(() => {
         populateSongChoice();
-        loaded = true
-        if(loaded) {
+        if(isPlayerReady === true) {
             getPopPlayer();
         }
     }, []);
-    
+
     const getPopPlayer=(choice)=>{
         setPopPlayer(choice)
     }
     const populateSongChoice = () => {
         var songChoice = question10.items.splice(0, 4);
-        console.log("TEST10>>>",songChoice)
+        // console.log("TEST1>>>",songChoice)
         setSongs(songChoice);
+        setPlayerReady(true);
         };
+
 
     return (
         <div className="song__box">
+            {isClicked
+              ? null:
             <Player track= {popPlayer}/>
+            }
             <h1 className="song__player">{isAnswered}</h1>
             <div className="song__list">
             {isSongs.map((item, index) => (<SongRow2 key ={index} isClicked={isClicked} getPopPlayer={getPopPlayer} isRightOrWrong={isRightOrWrong} handleIsClicked={handleIsClicked} tracks={item} song={index} answer={rightAnswer}/>))}
