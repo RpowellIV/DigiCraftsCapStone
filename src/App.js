@@ -1,7 +1,14 @@
 import React from 'react';
-import { Login, Header, Home, LeaderBoard, Footer, GameBoard } from './components';
+import {
+  Login,
+  Header,
+  Home,
+  LeaderBoard,
+  Footer,
+  GameBoard,
+  DeveloperPage,
+} from './components';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-
 
 const App = () => {
   return (
@@ -21,6 +28,11 @@ const App = () => {
           <Route path='/leaderboard'>
             <Header />
             <LeaderBoard />
+            <Footer />
+          </Route>
+          <Route path='/developers'>
+            <Header />
+            <DeveloperPage />
             <Footer />
           </Route>
           <Route path='/gameboard'>

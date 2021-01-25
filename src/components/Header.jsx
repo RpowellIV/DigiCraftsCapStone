@@ -13,6 +13,7 @@ let Header = () => {
         <Link to='/leaderboard' className='leaderboard'>
           Leaderboard
         </Link>
+        <Link to='/developers'>Developers</Link>
         <Link to='/' className='logout'>
           LogOut
         </Link>
