@@ -73,7 +73,6 @@ const reducer = (state = initialState, action) => {
       };
       
     case 'SET_QUESTION_3':
-      console.log('in reducer!', action.question3);
       return {
         ...state,
         question3: action.question3,
