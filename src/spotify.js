@@ -4,7 +4,8 @@
 export const authEndpoint = 'https://accounts.spotify.com/authorize';
 
 //set previously on Spotify
-const redirectUri = 'http://localhost:3000/';
+// const redirectUri = 'http://localhost:3000/';
+const redirectUri = 'https://tunechamp-client.herokuapp.com/'
 
 //login id
 const clientId = '3df631b3b2aa48ccb68f10acfdc8a359';
