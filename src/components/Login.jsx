@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 import '../styles/Login.css';
 import { loginUrl } from '../spotify';
 import { getTokenFromUrl } from '../spotify';
@@ -164,7 +165,20 @@ function Login() {
         </div>
       </div>
       {token ? (
-        <h1>LOGGED IN</h1>
+        <div className='home'>
+        <h1>How to get started</h1>
+        <p>
+           After you've logged into Spotify, choose to start to the game.
+        </p>
+        <h1>How to Play</h1>
+        <ul className='how'>
+           <li>You'll be given four songs</li>
+           <li>Choose the correct answer from 4 given artist/song combinations.</li>
+           <li>Each correct answer will give you a point.</li>
+           <li>Score points and compare to your friends on the Leaderboard! </li>
+        </ul>  
+        <Link to='/gameboard' className='gameboard'>GAMEBOARD</Link>
+      </div>
       ) : (
         <a href={loginUrl}>LOGIN WITH SPOTIFY TEST</a>
       )}

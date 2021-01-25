@@ -1,7 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Playlist from './Playlist'
-import Player from './Player'
 import '../styles/Home.css'
 
 const Home=({ spotify })=>{
