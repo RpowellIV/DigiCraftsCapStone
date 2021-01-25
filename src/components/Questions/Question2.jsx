@@ -10,7 +10,7 @@ let rightAnswer = getRandomInt(1,4)
 
 function Question2() {
 
-    const[{ question2 }, dispatch] = useDataLayerValue();
+    const[{ question2, score }, dispatch] = useDataLayerValue();
     const [isClicked , setIsClicked]= useState(false);
     const [isRightOrWrong , setIsRightOrWrong]= useState(null);
     const [isSongs, setSongs] = useState([])
@@ -19,21 +19,38 @@ function Question2() {
     const [popPlayer,setPopPlayer]=useState(null);
 
     const handleIsClicked = (answer) => {
+        let newScore = score;
         setIsClicked(true);
         setIsRightOrWrong(answer);
-        console.log('HANDLE HAS BEEN CLICKED!')
-        console.log('Right or Wrong', answer)
+        // console.log('HANDLE HAS BEEN CLICKED!')
+        // console.log('Right or Wrong', answer)
         if (!answer) {
+            newScore = newScore+1
             setAnswered('WRONG CHOICE')
+            dispatch({
+                type: 'SET_SCORE',
+                score: newScore,
+              });
         } else if (answer) {
             setAnswered('CORRECT!!!')
+            newScore = newScore+100
+            dispatch({
+                type: 'SET_SCORE',
+                score: newScore,
+              });
             }
+            // console.log("SCORE>>>",score)
         }
-
+    let loaded = false;
+    
     useEffect(() => {
         populateSongChoice();
-        getPopPlayer();
+        loaded = true
+        if(loaded) {
+            getPopPlayer();
+        }
     }, []);
+    
     const getPopPlayer=(choice)=>{
         setPopPlayer(choice)
     }

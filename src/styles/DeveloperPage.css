@@ -1,0 +1,17 @@
+.developerPage {
+  background-color: rgb(40, 4, 7);
+  /* color: white; */
+  color: #f8f1f1;
+  display: flex;
+  flex-direction: column;
+}
+
+.developerPage__title {
+  display: flex;
+  justify-content: center;
+}
+
+.developerPage__row {
+  display: flex;
+  justify-content: center;
+}

@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 import '../styles/Login.css';
 import { loginUrl } from '../spotify';
 import { getTokenFromUrl } from '../spotify';
@@ -142,7 +143,7 @@ function Login() {
   }, [token, user, dispatch]);
 
   useEffect(() => {
-    if(user){
+    if (user) {
       sendUser();
     }
   }, [token, user]);
@@ -156,14 +157,31 @@ function Login() {
   };
 
   return (
-    <div className='login'>
-      <div className='jumbotron jumbotron-fluid'>
-        <div className='container'>
-          <h1 className='display-4'>TUNE CHAMP TEST</h1>
-          <p className='lead'>THE RIGHT GAME FOR GAME NIGHT...</p>
+    <div className="login">
+      <div className="jumbotron jumbotron-fluid">
+        <div className="container">
+          <h1 className="display-4">TUNE CHAMP TEST</h1>
+          <p className="lead">THE RIGHT GAME FOR GAME NIGHT...</p>
         </div>
       </div>
-      {token ? <h1>LOGGED IN</h1> : <a href={loginUrl}>LOGIN WITH SPOTIFY TEST</a>}
+      {token ? (
+        <div className='home'>
+        <h1>How to get started</h1>
+        <p>
+           After you've logged into Spotify, choose to start to the game.
+        </p>
+        <h1>How to Play</h1>
+        <ul className='how'>
+           <li>You'll be given four songs</li>
+           <li>Choose the correct answer from 4 given artist/song combinations.</li>
+           <li>Each correct answer will give you a point.</li>
+           <li>Score points and compare to your friends on the Leaderboard! </li>
+        </ul>  
+        <Link to='/gameboard' className='gameboard'>GAMEBOARD</Link>
+      </div>
+      ) : (
+        <a href={loginUrl}>LOGIN WITH SPOTIFY TEST</a>
+      )}
     </div>
   );
 }

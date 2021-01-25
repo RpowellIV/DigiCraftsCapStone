@@ -1,13 +1,12 @@
-import React from 'react'
-import '../styles/Footer.css'
+import React from 'react';
+import '../styles/Footer.css';
 
 function Footer() {
-    return (
-        <div className='foot'>
-            <p className='text'>Rights of songs belong to artist.</p>
-            <p> © Tunechamp, Stephen Roach, Lewis Ritenour, and Rob P.</p>
-        </div>
-    )
+  return (
+    <div className='footer'>
+      <p className='text'>Copyright © 2021 TuneChamp.</p>
+    </div>
+  );
 }
 
-export default Footer
+export default Footer;
