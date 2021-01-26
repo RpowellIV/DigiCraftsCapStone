@@ -22,7 +22,6 @@ function Question6() {
       let newScore = score;
       setIsClicked(true);
       setIsRightOrWrong(answer);
-      // console.log('HANDLE HAS BEEN CLICKED!')
       console.log('Right or Wrong', answer)
       if (!answer) {
           newScore = newScore
@@ -39,7 +38,6 @@ function Question6() {
               score: newScore,
             });
           }
-          // console.log("SCORE>>>",score)
       }
   
   useEffect(() => {
@@ -54,7 +52,6 @@ function Question6() {
   }
   const populateSongChoice = () => {
       var songChoice = question6.items.splice(0, 4);
-      // console.log("TEST1>>>",songChoice)
       setSongs(songChoice);
       setPlayerReady(true);
       };

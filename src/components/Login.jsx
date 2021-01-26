@@ -181,7 +181,7 @@ function Login() {
         <Link to='/gameboard' className='gameboard'><Button variant="secondary">GAMEBOARD</Button>{' '}</Link>
       </div>
       ) : (
-        <a href={loginUrl}>LOGIN WITH SPOTIFY TEST</a>
+        <a href={loginUrl}>LOGIN WITH SPOTIFY</a>
       )}
     </div>
   );

@@ -1,15 +1,12 @@
 import Header from './Header';
 import Login from './Login';
 import Home from './Home';
-import TuneChamp from './TuneChamp';
 import LeaderBoard from './LeaderBoard';
 import GameBoard from './GameBoard';
 import LinkButton from './LinkButton';
-import SongRow from './SongRow';
 import SongRow2 from './SongRow2';
 import Footer from './Footer';
 import Player from './Player';
-import Playlist from './Playlist';
 import Score from './Score';
 import DeveloperCard from './DeveloperCard';
 import DeveloperPage from './DeveloperPage';
@@ -28,15 +25,11 @@ export {
   Header,
   Login,
   Home,
-  TuneChamp,
   LeaderBoard,
   GameBoard,
-  SongRow,
   SongRow2,
   Player,
-  LinkButton,
   Footer,
-  Playlist,
   Score,
   DeveloperPage,
   DeveloperCard,

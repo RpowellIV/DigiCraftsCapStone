@@ -8,7 +8,7 @@ import { Navbar, NavDropdown, Nav } from 'react-bootstrap'
 let Header = () => {
   return (
 <Navbar className="navs" bg="light" expand="lg">
-  <Navbar.Brand href="/home"><img className='logo' src={TuneChamp} alt='TuneChamp test logo'></img></Navbar.Brand>
+  <Navbar.Brand href="/"><img className='logo' src={TuneChamp} alt='TuneChamp test logo'></img></Navbar.Brand>
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
   <Navbar.Collapse id="basic-navbar-nav">
     <Nav className="mr-auto">
