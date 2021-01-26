@@ -43,7 +43,7 @@ function Question1() {
         if(isPlayerReady === true) {
             getPopPlayer();
         }
-    }, [isPlayerReady, populateSongChoice]);
+    }, []);
 
     const getPopPlayer=(choice)=>{
         setPopPlayer(choice)
