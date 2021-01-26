@@ -35,6 +35,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 100vh;
+  padding-bottom: 4rem;
 }
 
 .boot__button > a {
