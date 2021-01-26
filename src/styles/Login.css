@@ -37,6 +37,7 @@
   align-items: center;
   min-height: 100vh;
   padding-bottom: 4rem;
+  padding-top: 100px;
 }
 
 .boot__button > a {
