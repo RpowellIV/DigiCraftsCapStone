@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useDataLayerValue } from '../DataLayer';
 import '../styles/Score.css';
 import { loginUrl } from '../spotify';
+import { Button } from 'react-bootstrap';
 
 function Score() {
   // eslint-disable-next-line no-unused-vars
@@ -31,7 +32,11 @@ function Score() {
           </p>
         </div>
       ) : (
-        <a href={loginUrl}>LOGIN WITH SPOTIFY TESTING</a>
+        <div className='gameboard'>
+        <Button href={loginUrl} className='boot__button'>
+          LOGIN WITH SPOTIFY
+        </Button>
+        </div>
       )}
     </div>
   );

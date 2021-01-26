@@ -2,6 +2,7 @@
   display: grid;
   place-items: center;
   background-color: rgb(40, 4, 7);
+  padding: 0;
   position: relative;
   min-height: 100vh;
   padding-bottom: 2.5rem;
@@ -29,4 +30,12 @@
 .container {
   color: white;
   padding: 0px 0px 0px 0px;
+}
+
+.boot__button > a {
+  border-radius: 99px;
+  background-color: #105e3a !important;
+  font-weight: 800;
+  color: white;
+  text-decoration: none;
 }

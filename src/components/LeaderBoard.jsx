@@ -3,6 +3,7 @@ import '../styles/Leaderboard.css';
 import MusicNoteRoundedIcon from '@material-ui/icons/MusicNoteRounded';
 import { useDataLayerValue } from '../DataLayer';
 import { loginUrl } from '../spotify';
+import { Button } from 'react-bootstrap';
 
 function LeaderBoard() {
   // eslint-disable-next-line no-unused-vars
@@ -56,7 +57,11 @@ function LeaderBoard() {
           </div>
         </div>
       ) : (
-        <a href={loginUrl}>LOGIN WITH SPOTIFY TEST</a>
+        <div className='gameboard'>
+        <Button href={loginUrl} className='boot__button'>
+          LOGIN WITH SPOTIFY
+        </Button>
+        </div>
       )}
     </>
   );
