@@ -48,7 +48,7 @@ function GameBoard({ spotify }) {
         </div>
       ) : (
         <div className='gameboard'>
-        <Button href={loginUrl} className='boot__button'>
+        <Button href={loginUrl} className='boot__button' variant="outline-info">
           LOGIN WITH SPOTIFY
         </Button>
         </div>

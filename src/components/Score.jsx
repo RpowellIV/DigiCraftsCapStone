@@ -32,8 +32,8 @@ function Score() {
           </p>
         </div>
       ) : (
-        <div className='gameboard'>
-        <Button href={loginUrl} className='boot__button'>
+        <div className='score'>
+        <Button href={loginUrl} className='boot__button' variant="outline-info">
           LOGIN WITH SPOTIFY
         </Button>
         </div>

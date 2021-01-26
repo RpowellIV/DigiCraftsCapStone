@@ -1,6 +1,8 @@
 .login {
   display: grid;
   place-items: center;
+  align-items: center;
+  justify-content: center;
   background-color: rgb(40, 4, 7);
   padding: 0;
   position: relative;

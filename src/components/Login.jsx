@@ -170,7 +170,11 @@ function Login() {
           </Link>
         </div>
       ) : (
-        <a href={loginUrl}>LOGIN WITH SPOTIFY</a>
+        <div className='leaderboardPage'>
+        <Button href={loginUrl} className='boot__button' variant="outline-info">
+          LOGIN WITH SPOTIFY
+        </Button>
+        </div>
       )}
     </div>
     </div>

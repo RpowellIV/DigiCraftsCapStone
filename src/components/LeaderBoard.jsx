@@ -57,8 +57,8 @@ function LeaderBoard() {
           </div>
         </div>
       ) : (
-        <div className='gameboard'>
-        <Button href={loginUrl} className='boot__button'>
+        <div className='leaderboardPage'>
+        <Button href={loginUrl} className='boot__button' variant="outline-info">
           LOGIN WITH SPOTIFY
         </Button>
         </div>
