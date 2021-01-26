@@ -9,15 +9,15 @@ function Score() {
   return (
     <div className="score">
       {token ? (
-        <>
-          <h1>
-            {user.id}, you scored {score} points!
+        <div className="score-post">
+          <h1 className="you-score">
+            <h1 className="you-score">{user.id},</h1> you scored {score} points!
           </h1>{' '}
           <br />
           <p>
             Go check the leaderboard to see how you favor against everyone else.
           </p>
-        </>
+        </div>
       ) : (
         <a href={loginUrl}>LOGIN WITH SPOTIFY TESTING</a>
       )}

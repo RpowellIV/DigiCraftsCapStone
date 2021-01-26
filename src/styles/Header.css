@@ -2,7 +2,7 @@
   /* object-fit: contain; */
   justify-content: left;
   height: 150px;
-  widows: 150px;
+  width: 150px;
   background-color: #20457c;
 }
 .head-links {
@@ -19,4 +19,7 @@
 .logout {
   padding-right: 25px;
   color: black;
+}
+.navs {
+  background-color: #20457c !important;
 }

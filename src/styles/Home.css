@@ -5,3 +5,7 @@
 .how {
   margin: 0px;
 }
+.gameboard {
+  display: flex;
+  justify-content: center;
+}
