@@ -20,7 +20,8 @@
 
 .login {
   background-color: rgb(40, 4, 7);
-  height: 100%;
+  position: relative;
+  min-height: 100vh;
 }
 
 .jumbotron {
