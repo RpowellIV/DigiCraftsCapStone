@@ -10,6 +10,24 @@ let Header = () => {
       <Navbar.Brand href="/">
         <img className="logo" src={TuneChamp} alt="TuneChamp test logo"></img>
       </Navbar.Brand>
+      <Nav className="mr-auto">
+      <Nav.Link>
+          <Link to="/gameboard" className="gameboard">
+            PLAY THE GAME!
+          </Link>
+      </Nav.Link>
+      <Nav.Link>
+          <Link to="/leaderboard" className="leaderboard">
+            Leaderboard
+          </Link>
+      </Nav.Link>
+      <Nav.Link>
+        <Link to="/developers" className="developers">Developers</Link>
+      </Nav.Link>
+      <Nav.Link>
+        <Link to="/">Logout</Link>
+      </Nav.Link>
+      </Nav>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
