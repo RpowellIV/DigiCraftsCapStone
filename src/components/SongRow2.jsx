@@ -39,7 +39,6 @@ function SongRow2({
       getPopPlayer(tracks.track.id);
     }
   }, [getPopPlayer]);
-  
   return (
     <div className="songRow" id="songRow">
       <button
