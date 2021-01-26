@@ -8,7 +8,7 @@
   color: white;
 }
 
-.login > a {
+.login > a, .container > a {
   padding: 10px;
   border-radius: 99px;
   background-color: #105e3a;
