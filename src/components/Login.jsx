@@ -1,4 +1,4 @@
-import React, { useEffect, useCallback } from 'react';
+import React, { useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import '../styles/Login.css';
@@ -131,11 +131,6 @@ function Login() {
     }
   }, [token, user]);
 
-  const stableDispatch = useCallback(senduser, []) //assuming that it doesn't need to change
-
-  useEffect(() =>{
-       stableDispatch(token)
-  },[stableDispatch])
 
   const sendUser = async () => {
     // eslint-disable-next-line no-unused-vars
