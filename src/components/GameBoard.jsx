@@ -19,7 +19,7 @@ import '../styles/GameBoard.css';
 
 function GameBoard({ spotify }) {
   
-  const [{ token }, dispatch] = useDataLayerValue();
+  const [{ token }] = useDataLayerValue();
 
   return (
     <div className="gameBoard">

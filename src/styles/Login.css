@@ -1,5 +1,5 @@
 .login {
-  display: grid;
+  display: flex;
   place-items: center;
   align-items: center;
   justify-content: center;
