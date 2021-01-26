@@ -143,13 +143,12 @@ function Login() {
   };
 
   return (
+    <>
     <div className="login">
       <div className="jumbotron jumbotron-fluid">
         <div className="container">
           <h1 className="display-4">TUNE CHAMP</h1>
           <p className="lead">SET THE RIGHT "TUNE" FOR GAME NIGHT...</p>
-        </div>
-      </div>
       {token ? (
         <div className="home">
           <h1>How to get started</h1>
@@ -174,6 +173,9 @@ function Login() {
         <a href={loginUrl}>LOGIN WITH SPOTIFY</a>
       )}
     </div>
+    </div>
+    </div>
+    </>
   );
 }
 
