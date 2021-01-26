@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useCallback} from 'react';
 import { Link } from 'react-router-dom';
 import { loginUrl } from '../spotify';
 import { useDataLayerValue } from '../DataLayer';
