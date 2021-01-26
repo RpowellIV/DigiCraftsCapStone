@@ -144,8 +144,8 @@ function Login() {
 
   return (
     <>
-    <div className="login">
-      <div className="jumbotron jumbotron-fluid">
+    {/* <div className="login"> */}
+      <div className="jumbotron jumbotron-fluid login">
         <div className="container">
           <h1 className="display-4">TUNE CHAMP</h1>
           <p className="lead">SET THE RIGHT "TUNE" FOR GAME NIGHT...</p>
@@ -170,15 +170,13 @@ function Login() {
           </Link>
         </div>
       ) : (
-        <div className='login_button'>
         <Button href={loginUrl} className='boot__button' variant="outline-info">
           LOGIN WITH SPOTIFY
         </Button>
-        </div>
       )}
+      </div>
     </div>
-    </div>
-    </div>
+    {/* </div> */}
     </>
   );
 }
