@@ -14,6 +14,7 @@ import {
   Question9,
   Question10,
 } from './index';
+import { Button } from 'react-bootstrap';
 import '../styles/GameBoard.css';
 
 function GameBoard({ spotify }) {
@@ -46,7 +47,11 @@ function GameBoard({ spotify }) {
           </div>
         </div>
       ) : (
-        <a href={loginUrl}>LOGIN WITH SPOTIFY TESTING</a>
+        <div className='gameboard'>
+        <Button href={loginUrl} className='boot__button'>
+          LOGIN WITH SPOTIFY
+        </Button>
+        </div>
       )}
     </div>
   );
