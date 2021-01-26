@@ -12,9 +12,9 @@ let Header = () => {
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
   <Navbar.Collapse id="basic-navbar-nav">
     <Nav className="mr-auto">
-      <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-        <NavDropdown.Item href="/leaderboard">Leaderboard</NavDropdown.Item>
-        <NavDropdown.Item href="/developers">Developers</NavDropdown.Item>
+      <NavDropdown title="SEE MORE!" id="basic-nav-dropdown">
+        <NavDropdown.Item ><Link to='/leaderboard' className='leaderboard'>Leaderboard</Link></NavDropdown.Item>
+        <NavDropdown.Item ><Link to='/developers'>Developers</Link></NavDropdown.Item>
         <NavDropdown.Item href="/">Logout</NavDropdown.Item>
       </NavDropdown>
     </Nav>
