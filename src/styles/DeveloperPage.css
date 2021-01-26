@@ -4,7 +4,10 @@
   color: #f8f1f1;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  align-items: center;
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 2.5rem;
 }
 
 .developerPage__title {
@@ -15,4 +18,5 @@
 .developerPage__row {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
