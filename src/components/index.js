@@ -1,6 +1,5 @@
 import Header from './Header';
 import Login from './Login';
-import Home from './Home';
 import LeaderBoard from './LeaderBoard';
 import GameBoard from './GameBoard';
 import SongRow2 from './SongRow2';
@@ -23,7 +22,6 @@ import Question10 from './Questions/Question10';
 export {
   Header,
   Login,
-  Home,
   LeaderBoard,
   GameBoard,
   SongRow2,
