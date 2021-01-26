@@ -6,6 +6,7 @@ import { loginUrl } from '../spotify';
 import { getTokenFromUrl } from '../spotify';
 import SpotifyWebApi from 'spotify-web-api-js';
 import { useDataLayerValue } from '../DataLayer';
+import { Button } from 'react-bootstrap'
 
 const spotify = new SpotifyWebApi();
 
@@ -168,7 +169,7 @@ function Login() {
         <div className='home'>
         <h1>How to get started</h1>
         <p>
-           After you've logged into Spotify, choose to start to the game.
+           After you've logged into Spotify, choose to start the game.
         </p>
         <h1>How to Play</h1>
         <ul className='how'>
@@ -177,7 +178,7 @@ function Login() {
            <li>Each correct answer will give you a point.</li>
            <li>Score points and compare to your friends on the Leaderboard! </li>
         </ul>  
-        <Link to='/gameboard' className='gameboard'>GAMEBOARD</Link>
+        <Link to='/gameboard' className='gameboard'><Button variant="secondary">GAMEBOARD</Button>{' '}</Link>
       </div>
       ) : (
         <a href={loginUrl}>LOGIN WITH SPOTIFY TEST</a>
