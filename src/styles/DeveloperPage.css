@@ -4,6 +4,7 @@
   color: #f8f1f1;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .developerPage__title {
