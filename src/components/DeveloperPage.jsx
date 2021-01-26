@@ -3,7 +3,7 @@ import '../styles/DeveloperPage.css';
 import DeveloperCard from './DeveloperCard';
 import RobertImg from '../images/RobertPowell2.png';
 import StephenImg from '../images/StephenRoach3.png';
-import NPHImg from '../images/NPH.jpg';
+import LewRitImg from '../images/imagejpeg_0.jpg';
 
 function DeveloperPage() {
   return (
@@ -27,7 +27,7 @@ function DeveloperPage() {
           portfolioLink='https://stephenroach.dev/'
         />
         <DeveloperCard
-          img={NPHImg}
+          img={LewRitImg}
           name='Lewis Ritenour'
           jobTitle='Full-Stack Software Developer'
           linkedInLink='https://www.linkedin.com/in/lewis-ritenour-8797721bb/'
