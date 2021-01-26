@@ -17,6 +17,18 @@
   padding-bottom: 20px;
 }
 
+.gameboard_login {
+  background-color: rgb(40, 4, 7);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 2.5rem;
+}
+
 .gameBoard__buttonText {
   height: 50px;
   width: 150px;

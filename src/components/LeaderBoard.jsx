@@ -57,7 +57,7 @@ function LeaderBoard() {
           </div>
         </div>
       ) : (
-        <div className='leaderboardPage'>
+        <div className='leaderboardPage_button'>
         <Button href={loginUrl} className='boot__button' variant="outline-info">
           LOGIN WITH SPOTIFY
         </Button>
