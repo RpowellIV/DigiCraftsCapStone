@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { loginUrl } from '../spotify';
 import { useDataLayerValue } from '../DataLayer';
 import {
-  Playlist,
   Question1,
   Question2,
   Question3,
@@ -14,12 +13,11 @@ import {
   Question8,
   Question9,
   Question10,
-  Player,
 } from './index';
 import '../styles/GameBoard.css';
 
 function GameBoard({ spotify }) {
-  const [{ user, token }, dispatch] = useDataLayerValue();
+  const [{ token }, dispatch] = useDataLayerValue();
   console.log('GAMEBOARD>>>>', token);
 
   function getScore() {
