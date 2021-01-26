@@ -1,8 +1,11 @@
 .login {
   display: grid;
   place-items: center;
-  height: 50vh;
-  background-color: black;
+  background-color: rgb(40, 4, 7);
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 2.5rem;
+  color: white;
 }
 
 .login > a {
@@ -16,12 +19,6 @@
 .gameboard {
   display: flex;
   justify-content: center;
-}
-
-.login {
-  background-color: rgb(40, 4, 7);
-  position: relative;
-  min-height: 100vh;
 }
 
 .jumbotron {
