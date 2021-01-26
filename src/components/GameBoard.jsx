@@ -16,7 +16,8 @@ import {
 } from './index';
 import '../styles/GameBoard.css';
 
-function GameBoard({ spotify }) {
+function GameBoard() {
+  // eslint-disable-next-line no-unused-vars
   const [{ token }, dispatch] = useDataLayerValue();
 
   return (

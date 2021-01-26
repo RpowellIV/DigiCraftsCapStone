@@ -132,6 +132,7 @@ function Login() {
   }, [token, user]);
 
   const sendUser = async () => {
+    // eslint-disable-next-line no-unused-vars
     const res = await axios.post(
       'https://tunechamp-server.herokuapp.com/user',
       {

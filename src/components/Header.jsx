@@ -11,21 +11,17 @@ let Header = () => {
         <img className="logo" src={TuneChamp} alt="TuneChamp test logo"></img>
       </Navbar.Brand>
       <Nav className="mr-auto headerlinks">
-      <Nav.Link>
-          <Link to="/gameboard" className="gameboard">
-            PLAY THE GAME!
-          </Link>
+      <Nav.Link as={Link} to="/gameboard" className="gameboard">
+        PLAY THE GAME!
       </Nav.Link>
-      <Nav.Link>
-          <Link to="/leaderboard" className="leaderboard">
-            Leaderboard
-          </Link>
+      <Nav.Link as={Link} to="/leaderboard" className="leaderboard">
+        Leaderboard
       </Nav.Link>
-      <Nav.Link>
-        <Link to="/developers" className="developers">Developers</Link>
+      <Nav.Link as={Link} to="/developers" className="developers">
+        Developers
       </Nav.Link>
-      <Nav.Link>
-        <Link to="/">Logout</Link>
+      <Nav.Link as={Link} to="/">
+        Logout
       </Nav.Link>
       </Nav>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />

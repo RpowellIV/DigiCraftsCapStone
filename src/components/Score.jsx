@@ -1,10 +1,11 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import axios from 'axios';
 import { useDataLayerValue } from '../DataLayer';
 import '../styles/Score.css';
 import { loginUrl } from '../spotify';
 
 function Score() {
+  // eslint-disable-next-line no-unused-vars
   const [{ user, token, score }, dispatch] = useDataLayerValue();
 
   const sendScore = async () => {

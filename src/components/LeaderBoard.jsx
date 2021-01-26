@@ -5,6 +5,7 @@ import { useDataLayerValue } from '../DataLayer';
 import { loginUrl } from '../spotify';
 
 function LeaderBoard() {
+  // eslint-disable-next-line no-unused-vars
   const [{ leaderboard, token }, dispatch] = useDataLayerValue();
 
   return (

@@ -23,7 +23,6 @@ function Question1() {
         setIsClicked(true);
         setIsRightOrWrong(answer);
         if (!answer) {
-            newScore = newScore
             setAnswered('WRONG CHOICE')
             dispatch({
                 type: 'SET_SCORE',
