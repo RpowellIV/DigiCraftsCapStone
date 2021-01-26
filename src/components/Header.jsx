@@ -25,21 +25,6 @@ let Header = () => {
       </Nav.Link>
       </Nav>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="mr-auto">
-          <NavDropdown title="SEE MORE!" id="basic-nav-dropdown">
-            <NavDropdown.Item>
-              <Link to="/leaderboard" className="leaderboard">
-                Leaderboard
-              </Link>
-            </NavDropdown.Item>
-            <NavDropdown.Item>
-              <Link to="/developers">Developers</Link>
-            </NavDropdown.Item>
-            <NavDropdown.Item href="/">Logout</NavDropdown.Item>
-          </NavDropdown>
-        </Nav>
-      </Navbar.Collapse>
     </Navbar>
   );
 };

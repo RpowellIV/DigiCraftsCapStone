@@ -6,7 +6,7 @@ const Player = ({ track }) => {
   return (
     <div className="border">
       <h3>Click Here</h3>
-      <ArrowDownwardTwoToneIcon className="arrow" fontSize="medium" />
+      <ArrowDownwardTwoToneIcon className="arrow" fontSize="large" />
       <iframe
         title="song player"
         className="player"

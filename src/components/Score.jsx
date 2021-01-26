@@ -9,6 +9,7 @@ function Score() {
   const [{ user, token, score }, dispatch] = useDataLayerValue();
 
   const sendScore = async () => {
+    // eslint-disable-next-line no-unused-vars
     const res = await axios.put('https://tunechamp-server.herokuapp.com/userScore', {
       user: user,
       totalScore: score,
