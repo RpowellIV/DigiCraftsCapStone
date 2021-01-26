@@ -129,7 +129,13 @@ function Login() {
     if (user) {
       sendUser();
     }
-  }, [token, user, sendUser]);
+  }, [token, user]);
+
+  const stableDispatch = useCallback(senduser, []) //assuming that it doesn't need to change
+
+  useEffect(() =>{
+       stableDispatch(token)
+  },[stableDispatch])
 
   const sendUser = async () => {
     // eslint-disable-next-line no-unused-vars
