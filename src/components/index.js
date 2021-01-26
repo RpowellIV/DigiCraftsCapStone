@@ -3,7 +3,6 @@ import Login from './Login';
 import Home from './Home';
 import LeaderBoard from './LeaderBoard';
 import GameBoard from './GameBoard';
-import LinkButton from './LinkButton';
 import SongRow2 from './SongRow2';
 import Footer from './Footer';
 import Player from './Player';
