@@ -23,7 +23,7 @@ function Question3() {
         setIsClicked(true);
         setIsRightOrWrong(answer);
         // console.log('HANDLE HAS BEEN CLICKED!')
-        // console.log('Right or Wrong', answer)
+        console.log('Right or Wrong', answer)
         if (!answer) {
             newScore = newScore
             setAnswered('WRONG CHOICE')

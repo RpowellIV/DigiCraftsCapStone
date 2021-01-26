@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import '../styles/SongRow.css';
 
 function SongRow2({
@@ -10,16 +10,18 @@ function SongRow2({
   isRightOrWrong,
   getPopPlayer,
 }) {
-  let correct;
+  const [correct, setCorrect]=useState(false)
   // let message = 'Not this one';
-  if (answer === song) {
-    // console.log('Right Answer');
-    // message = 'Correct!';
-    correct = true;
-  } else {
-    // console.log('Not this one');
-    correct = false;
-  }
+  useEffect(()=>{
+    if (answer === song) {
+      getPopPlayer(tracks.track.id)
+      // message = 'Correct!';
+      setCorrect(true)
+    } else {
+      // console.log('Not this one');
+      setCorrect(false);
+    }
+  },[])
 
   function handleClick(e) {
     e.preventDefault();
@@ -34,11 +36,11 @@ function SongRow2({
     }
     handleIsClicked(isRightOrWrong);
   }
-  useEffect(() => {
-    if (getPopPlayer) {
-      getPopPlayer(tracks.track.id);
-    }
-  }, [getPopPlayer]);
+  // useEffect(() => {
+  //   if (getPopPlayer) {
+  //     getPopPlayer(tracks.track.id);
+  //   }
+  // }, [getPopPlayer]);
   
   return (
     <div className="songRow" id="songRow">
