@@ -1,4 +1,4 @@
-import React, {useEffect, useCallback} from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { loginUrl } from '../spotify';
 import { useDataLayerValue } from '../DataLayer';
@@ -17,15 +17,10 @@ import {
 import { Button } from 'react-bootstrap';
 import '../styles/GameBoard.css';
 
-function GameBoard({ spotify }) {
+function GameBoard() {
   
   const [{ token }, dispatch] = useDataLayerValue();
   
-  const stableDispatch = useCallback(dispatch, []) //assuming that it doesn't need to change
-
-  useEffect(() =>{
-       stableDispatch(token)
-  },[stableDispatch])
 
   return (
     <div className="gameBoard">

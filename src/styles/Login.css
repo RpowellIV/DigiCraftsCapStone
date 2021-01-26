@@ -29,9 +29,12 @@
   background-color: rgb(40, 4, 7);
   margin: 0px;
 }
-.container {
+.container, .home {
   color: white;
   padding: 0px 0px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .boot__button > a {
