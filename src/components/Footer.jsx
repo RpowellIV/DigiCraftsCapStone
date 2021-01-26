@@ -5,6 +5,7 @@ function Footer() {
   return (
     <div className='footer'>
       <p className='text'>Copyright © 2021 TuneChamp.</p>
+      <p> SITE DESIGNED WITH  CREDITS TO REACT, SPOTIFY API, BOOTSTRAP AND MATERIAL UI</p>
     </div>
   );
 }
