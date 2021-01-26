@@ -10,7 +10,7 @@ let Header = () => {
       <Navbar.Brand href="/">
         <img className="logo" src={TuneChamp} alt="TuneChamp test logo"></img>
       </Navbar.Brand>
-      <Nav className="mr-auto">
+      <Nav className="mr-auto headerlinks">
       <Nav.Link>
           <Link to="/gameboard" className="gameboard">
             PLAY THE GAME!

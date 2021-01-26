@@ -139,7 +139,6 @@ function Login() {
         token: token,
       }
     );
-    console.log(res);
   };
 
   return (

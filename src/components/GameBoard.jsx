@@ -18,18 +18,12 @@ import '../styles/GameBoard.css';
 
 function GameBoard({ spotify }) {
   const [{ token }, dispatch] = useDataLayerValue();
-  console.log('GAMEBOARD>>>>', token);
-
-  function getScore() {
-    console.log('Scored!');
-  }
 
   return (
     <div className="gameBoard">
       {token ? (
         <div>
           <div>
-            {/* <Playlist key='0' /> */}
             <Question1 key="1" />
             <Question2 key="2" />
             <Question3 key="3" />
@@ -44,7 +38,7 @@ function GameBoard({ spotify }) {
 
           <div className="gameBoard__button">
             <Link to="/score">
-              <button onClick={getScore} className="gameBoard__buttonText">
+              <button className="gameBoard__buttonText">
                 Click to see your score!
               </button>
             </Link>

@@ -23,7 +23,6 @@ function Question10() {
         let newScore = score;
         setIsClicked(true);
         setIsRightOrWrong(answer);
-        console.log('Right or Wrong', answer)
         if (!answer) {
             newScore = newScore
             setAnswered('WRONG CHOICE')

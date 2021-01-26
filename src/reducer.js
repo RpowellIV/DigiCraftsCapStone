@@ -19,9 +19,6 @@ export const initialState = {
 };
 
 const reducer = (state = initialState, action) => {
-  console.log(action);
-
-  // Action -> type, [payload]
 
   switch (action.type) {
     case 'SET_USER':

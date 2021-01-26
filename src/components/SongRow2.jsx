@@ -11,14 +11,11 @@ function SongRow2({
   getPopPlayer,
 }) {
   const [correct, setCorrect]=useState(false)
-  // let message = 'Not this one';
   useEffect(()=>{
     if (answer === song) {
       getPopPlayer(tracks.track.id)
-      // message = 'Correct!';
       setCorrect(true)
     } else {
-      // console.log('Not this one');
       setCorrect(false);
     }
   },[])
@@ -26,22 +23,12 @@ function SongRow2({
   function handleClick(e) {
     e.preventDefault();
     if (!correct) {
-      // console.log('wrong')
       isRightOrWrong = false;
-      // console.log(isRightOrWrong)
     } else {
-      // console.log('GOOD GUESS!')
       isRightOrWrong = true;
-      // console.log(isRightOrWrong)
     }
     handleIsClicked(isRightOrWrong);
   }
-  // useEffect(() => {
-  //   if (getPopPlayer) {
-  //     getPopPlayer(tracks.track.id);
-  //   }
-  // }, [getPopPlayer]);
-  
   return (
     <div className="songRow" id="songRow">
       <button

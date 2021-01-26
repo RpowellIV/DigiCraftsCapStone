@@ -12,7 +12,6 @@ function Score() {
       user: user,
       totalScore: score,
     });
-    console.log(res);
   };
 
   sendScore();
