@@ -19,7 +19,13 @@ import '../styles/GameBoard.css';
 
 function GameBoard({ spotify }) {
   
-  const [{ token }] = useDataLayerValue();
+  const [{ token }, dispatch] = useDataLayerValue();
+  
+  const stableDispatch = useCallback(dispatch, []) //assuming that it doesn't need to change
+
+  useEffect(() =>{
+       stableDispatch(token)
+  },[stableDispatch])
 
   return (
     <div className="gameBoard">

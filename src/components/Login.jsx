@@ -129,7 +129,7 @@ function Login() {
     if (user) {
       sendUser();
     }
-  }, [token, user]);
+  }, [token, user, sendUser]);
 
   const sendUser = async () => {
     // eslint-disable-next-line no-unused-vars

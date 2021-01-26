@@ -18,7 +18,7 @@ function SongRow2({
     } else {
       setCorrect(false);
     }
-  },[])
+  },[answer, getPopPlayer, song, tracks.track.id])
 
   function handleClick(e) {
     e.preventDefault();
