@@ -2,7 +2,6 @@ import React from 'react';
 import {
   Login,
   Header,
-  Home,
   LeaderBoard,
   Footer,
   GameBoard,
@@ -19,11 +18,6 @@ const App = () => {
           <Route exact path="/">
             <Header />
             <Login />
-            <Footer />
-          </Route>
-          <Route path="/home">
-            <Header />
-            <Home />
             <Footer />
           </Route>
           <Route path="/leaderboard">
