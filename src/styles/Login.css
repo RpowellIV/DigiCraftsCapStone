@@ -13,6 +13,10 @@
   color: white;
   text-decoration: none;
 }
+.gameboard {
+  display: flex;
+  justify-content: center;
+}
 
 .login {
   background-color: rgb(40, 4, 7);
