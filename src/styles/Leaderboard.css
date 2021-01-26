@@ -1,9 +1,10 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap'); */
 
 .leaderboardPage {
-  background-color: black;
-  height: 100%;
+  background-color: rgb(40, 4, 7);
   font-family: 'Press Start 2P', cursive;
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 2.5rem;
 }
 
 .leaderboardPage__title {
