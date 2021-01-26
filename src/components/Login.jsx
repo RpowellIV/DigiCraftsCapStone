@@ -161,8 +161,8 @@ function Login() {
     <div className="login">
       <div className="jumbotron jumbotron-fluid">
         <div className="container">
-          <h1 className="display-4">TUNE CHAMP TEST</h1>
-          <p className="lead">THE RIGHT GAME FOR GAME NIGHT...</p>
+          <h1 className="display-4">TUNE CHAMP</h1>
+          <p className="lead">SET THE RIGHT "TUNE" FOR GAME NIGHT...</p>
         </div>
       </div>
       {token ? (
@@ -173,15 +173,15 @@ function Login() {
         </p>
         <h1>How to Play</h1>
         <ul className='how'>
-           <li>You'll be given four songs</li>
-           <li>Choose the correct answer from 4 given artist/song combinations.</li>
-           <li>Each correct answer will give you a point.</li>
+           <li>You'll be given ten songs</li>
+           <li>Choose the correct answer from four given artist/song combinations.</li>
+           <li>Each correct answer will give you 100 points.</li>
            <li>Score points and compare to your friends on the Leaderboard! </li>
         </ul>  
         <Link to='/gameboard' className='gameboard'><Button variant="secondary">GAMEBOARD</Button>{' '}</Link>
       </div>
       ) : (
-        <a href={loginUrl}>LOGIN WITH SPOTIFY TEST</a>
+        <a href={loginUrl}>LOGIN WITH SPOTIFY</a>
       )}
     </div>
   );

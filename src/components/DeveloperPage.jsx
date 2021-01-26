@@ -31,8 +31,8 @@ function DeveloperPage() {
           name='Lewis Ritenour'
           jobTitle='Full-Stack Software Developer'
           linkedInLink='https://www.linkedin.com/in/lewis-ritenour-8797721bb/'
-          githubLink='https://github.com/stephen-roach'
-          portfolioLink='https://stephenroach.dev/'
+          githubLink='https://github.com/LewRit'
+          portfolioLink='https://lewrit.github.io/'
         />
       </div>
     </div>
