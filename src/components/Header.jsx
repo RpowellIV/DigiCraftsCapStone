@@ -5,13 +5,6 @@ import '../styles/Header.css';
 import { Navbar, NavDropdown, Nav } from 'react-bootstrap'
 
 
-
-
-
-
-
-
-
 let Header = () => {
   return (
 <Navbar className="navs" bg="light" expand="lg">
